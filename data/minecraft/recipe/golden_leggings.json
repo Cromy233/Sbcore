@@ -19,7 +19,7 @@
         "show_in_tooltip": true,
         "modifiers": [
           {
-            "id": "sbcore",
+            "id": "legs",
             "type": "player.sneaking_speed",
             "slot": "legs",
             "amount": 0.5,

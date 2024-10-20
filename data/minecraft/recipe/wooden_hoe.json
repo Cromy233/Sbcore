@@ -22,21 +22,21 @@
         "show_in_tooltip": false,
         "modifiers": [
           {
-            "id": "sbcore",
+            "id": "mainhand",
             "type": "player.entity_interaction_range",
             "slot": "mainhand",
             "amount": 3,
             "operation": "add_value"
           },
           {
-            "id": "sbcore",
+            "id": "mainhand",
             "type": "generic.attack_speed",
             "slot": "mainhand",
             "amount": -3.2,
             "operation": "add_value"
           },
           {
-            "id": "sbcore",
+            "id": "mainhand",
             "type": "generic.attack_damage",
             "slot": "mainhand",
             "amount": 3,
@@ -49,7 +49,7 @@
       },
       "minecraft:lore":[
         "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
-        "[{\"text\":\"在主手时 :\",\"color\":\"gray\",\"italic\":false}]",
+        "[{\"text\":\"在主手时：\",\"color\":\"gray\",\"italic\":false}]",
         "[{\"text\":\" 4 攻击伤害\",\"color\":\"dark_green\",\"italic\":false}]",
         "[{\"text\":\" 0.8 攻击速度\",\"color\":\"dark_green\",\"italic\":false}]",
         "[{\"text\":\"+3 实体交互距离\",\"color\":\"blue\",\"italic\":false}]"

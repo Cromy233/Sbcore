@@ -20,32 +20,53 @@
           "show_in_tooltip": false,
           "modifiers": [
             {
-              "id": "sbcore",
+              "id": "mainhand",
               "type": "generic.armor",
               "amount": -0.5,
               "operation": "add_multiplied_total",
-              "slot": "hand"
+              "slot": "mainhand"
             },
             {
-              "id": "sbcore",
+              "id": "mainhand",
               "type": "generic.attack_damage",
               "amount": 0.15,
               "operation": "add_multiplied_total",
-              "slot": "hand"
+              "slot": "mainhand"
             },
             {
-              "id": "sbcore",
+              "id": "mainhand",
               "type": "generic.attack_speed",
               "amount": 0.15,
               "operation": "add_multiplied_total",
-              "slot": "hand"
+              "slot": "mainhand"
+            },
+            {
+              "id": "offhand",
+              "type": "generic.armor",
+              "amount": -0.5,
+              "operation": "add_multiplied_total",
+              "slot": "offhand"
+            },
+            {
+              "id": "offhand",
+              "type": "generic.attack_damage",
+              "amount": 0.15,
+              "operation": "add_multiplied_total",
+              "slot": "offhand"
+            },
+            {
+              "id": "offhand",
+              "type": "generic.attack_speed",
+              "amount": 0.15,
+              "operation": "add_multiplied_total",
+              "slot": "offhand"
             }
           ]
         },
         "minecraft:item_name":"{\"text\":\"无畏契约\"}",
         "minecraft:lore":[
             "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
-            "[{\"text\":\"手持时 :\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"手持时：\",\"color\":\"gray\",\"italic\":false}]",
             "[{\"text\":\"+15% 攻击伤害\",\"color\":\"blue\",\"italic\":false}]",
             "[{\"text\":\"+15% 攻击速度\",\"color\":\"blue\",\"italic\":false}]",
             "[{\"text\":\"-50% 护甲值\",\"color\":\"red\",\"italic\":false}]"

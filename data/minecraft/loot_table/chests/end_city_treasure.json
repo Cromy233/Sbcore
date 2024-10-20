@@ -96,6 +96,13 @@
                         "duration": 600,
                         "amplifier": 4
                         }
+                    },
+                    {
+                      "effect": {
+                        "id": "wind_charged",
+                        "duration": 300,
+                        "amplifier": 0
+                      }
                     }
                   ]
                 }

@@ -47,7 +47,7 @@
                     "minecraft:item_name":"{\"text\":\"狂风之怒\"}",
                     "minecraft:lore":[
                         "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
-                        "[{\"text\":\"在主手时 :\",\"color\":\"gray\",\"italic\":false}]",
+                        "[{\"text\":\"在主手时：\",\"color\":\"gray\",\"italic\":false}]",
                         "[{\"text\":\" 5 攻击伤害\",\"color\":\"dark_green\",\"italic\":false}]",
                         "[{\"text\":\" 2 攻击速度\",\"color\":\"dark_green\",\"italic\":false}]",
                         "[{\"text\":\"+20% 速度\",\"color\":\"blue\",\"italic\":false}]"

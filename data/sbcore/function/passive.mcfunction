@@ -1,6 +1,6 @@
 #村民
 execute as @e[type=minecraft:villager,tag=!sbcore] run effect give @s minecraft:invisibility infinite 255 true
-execute at @e[type=minecraft:villager,tag=!sbcore] run summon minecraft:villager ~ ~ ~ {Tags:["sbcore"],Passengers:[{id:"iron_golem",attributes:[{id:"generic.scale",base:0.4},{id:"generic.max_health",base:25},{id:"generic.movement_speed",base:0.2}]}]}
+execute at @e[type=minecraft:villager,tag=!sbcore] run summon minecraft:villager ~ ~ ~ {Tags:["sbcore"],Passengers:[{id:"minecraft:iron_golem",attributes:[{id:"generic.scale",base:0.4},{id:"generic.max_health",base:25},{id:"generic.movement_speed",base:0.2}]}]}
 execute as @e[type=minecraft:villager,tag=!sbcore] run tp @s 0 -150 0
 execute as @e[type=minecraft:villager,tag=!sbcore] run kill @s
 execute as @e[type=minecraft:villager,tag=sbcore] run effect give @s minecraft:regeneration infinite 0 true
@@ -49,6 +49,7 @@ execute as @e[type=minecraft:zoglin,tag=!sbcore] run data merge entity @s {Tags:
 #青蛙
 execute as @e[type=minecraft:frog,tag=!sbcore] at @s if entity @e[distance=..5,type=!minecraft:frog,type=!minecraft:player] run data modify entity @s Motion set from entity @e[type=!minecraft:frog,limit=1,sort=nearest,type=!minecraft:player] Motion
 execute as @e[type=minecraft:frog,tag=!sbcore] at @s if entity @e[distance=..5,type=!minecraft:frog,type=!minecraft:player] run data modify entity @s Rotation set from entity @e[type=!minecraft:frog,limit=1,sort=nearest,type=!minecraft:player] Rotation
+execute at @e[type=minecraft:frog,tag=!sbcore] as @e[type=!minecraft:frog,distance=..2.5] run damage @s 2.0 minecraft:mob_attack by @e[type=minecraft:frog,tag=!sbcore,limit=1,sort=nearest]
 
 #鱿鱼
 execute as @e[type=minecraft:squid,tag=!sbcore] run effect give @s invisibility infinite 255 true
@@ -64,9 +65,9 @@ execute as @e[type=minecraft:squid,tag=!sbcore] run kill @s
 
 #鹦鹉
 execute as @e[type=minecraft:parrot,tag=!sbcore] run effect give @s invisibility infinite 255 true
-execute at @e[type=minecraft:parrot,tag=!sbcore] run summon bee ~ ~ ~ {Tags:["sbcore"],attributes:[{id:"minecraft:generic.scale",base:1},{id:"generic.flying_speed",base:3}],Passengers:[{id:"minecraft:minecart",Tags:["sbcore"]}]}
-execute at @e[type=minecraft:parrot,tag=!sbcore] run summon bee ~ ~ ~ {Tags:["sbcore"],attributes:[{id:"minecraft:generic.scale",base:1},{id:"generic.flying_speed",base:3}],Passengers:[{id:"minecraft:minecart",Tags:["sbcore"]}]}
-execute at @e[type=minecraft:parrot,tag=!sbcore] run summon bee ~ ~ ~ {Tags:["sbcore"],attributes:[{id:"minecraft:generic.scale",base:1},{id:"generic.flying_speed",base:3}],Passengers:[{id:"minecraft:minecart",Tags:["sbcore"]}]}
+execute at @e[type=minecraft:parrot,tag=!sbcore] run summon bee ~ ~ ~ {Tags:["sbcore"],attributes:[{id:"generic.scale",base:1},{id:"generic.flying_speed",base:3}],Passengers:[{id:"minecraft:minecart",Tags:["sbcore"]}]}
+execute at @e[type=minecraft:parrot,tag=!sbcore] run summon bee ~ ~ ~ {Tags:["sbcore"],attributes:[{id:"generic.scale",base:1},{id:"generic.flying_speed",base:3}],Passengers:[{id:"minecraft:minecart",Tags:["sbcore"]}]}
+execute at @e[type=minecraft:parrot,tag=!sbcore] run summon bee ~ ~ ~ {Tags:["sbcore"],attributes:[{id:"generic.scale",base:1},{id:"generic.flying_speed",base:3}],Passengers:[{id:"minecraft:minecart",Tags:["sbcore"]}]}
 execute as @e[type=minecraft:parrot,tag=!sbcore] run tp @s 0 -150 0
 execute as @e[type=minecraft:parrot,tag=!sbcore] run kill @s
 
@@ -77,19 +78,17 @@ execute at @e[type=minecraft:allay,tag=!sbcore] if entity @a[distance=..16,gamem
 execute at @e[type=minecraft:allay,tag=!sbcore] at @a[distance=..16,gamemode=!spectator] run particle minecraft:wax_off ~ ~ ~ 0.2 0 0.2 6 1 normal
 
 #骆驼
-execute as @e[type=minecraft:camel,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"minecraft:generic.fall_damage_multiplier",base:0},{id:"minecraft:generic.jump_strength",base:0.5},{id:"minecraft:generic.movement_speed",base:0.15},{id:"minecraft:generic.armor",base:20}]}
+execute as @e[type=minecraft:camel,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.fall_damage_multiplier",base:0},{id:"generic.jump_strength",base:0.5},{id:"generic.movement_speed",base:0.15},{id:"generic.armor",base:20}]}
 
 #赤足兽
 
-execute as @e run attribute @s minecraft:generic.burning_time modifier remove sbcore
+execute as @e run attribute @s minecraft:generic.burning_time modifier remove strider_grace
 
 #execute at @e[type=minecraft:strider,tag=!sbcore] run effect give @e[type=!minecraft:strider,distance=..5,type=!minecraft:player] minecraft:fire_resistance 1 0 true
 #execute at @e[type=minecraft:strider,tag=!sbcore] run effect give @a[distance=..5,gamemode=!spectator] minecraft:fire_resistance 1 0 true
-execute at @e[type=minecraft:strider,tag=!sbcore] as @e[distance=..5] run attribute @s minecraft:generic.burning_time modifier add sbcore -1 add_multiplied_total
+execute at @e[type=minecraft:strider,tag=!sbcore] as @e[distance=..5] run attribute @s minecraft:generic.burning_time modifier add strider_grace -1 add_multiplied_total
 execute at @e[type=minecraft:strider,tag=!sbcore] at @e[distance=..5,type=!minecraft:player] run particle minecraft:splash ~ ~1 ~ 0.25 0.5 0.25 0 2 normal
 execute at @e[type=minecraft:strider,tag=!sbcore] at @a[distance=..5,gamemode=!spectator] run particle minecraft:splash ~ ~1 ~ 0.25 0.5 0.25 0 2 normal
 
-
-
 #僵尸猪人
-execute as @e[type=minecraft:zombified_piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Grumm"',active_effects:[{id:"levitation",duration:1000000000,amplifier:0,show_particles:0b}]}
+execute as @e[type=minecraft:zombified_piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Grumm"',active_effects:[{id:"minecraft:levitation",duration:1000000000,amplifier:0,show_particles:0b}]}

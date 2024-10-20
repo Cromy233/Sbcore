@@ -33,12 +33,12 @@
         "nutrition": 4,
         "saturation": 7,
         "using_converts_to": {
-          "id": "bowl"
+          "id": "minecraft:bowl"
         },
         "effects": [
           {
             "effect": {
-              "id": "instant_health",
+              "id": "minecraft:instant_health",
               "duration": 1,
               "amplifier": 0
             }

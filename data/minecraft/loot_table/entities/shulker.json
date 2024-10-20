@@ -170,7 +170,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:guardian_spawn_egg"
+          "name": "minecraft:stray_spawn_egg"
         }
       ],
       "rolls": 1.0

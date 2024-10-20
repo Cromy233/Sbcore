@@ -22,14 +22,14 @@
        "show_in_tooltip": false,
        "modifiers": [
          {
-           "id": "sbcore",
+           "id": "mainhand",
            "type": "generic.attack_damage",
            "slot": "mainhand",
            "amount": 1,
            "operation": "add_value"
          },
          {
-           "id": "sbcore",
+           "id": "mainhand",
            "type": "generic.attack_speed",
            "slot": "mainhand",
            "amount": 996,
@@ -39,7 +39,7 @@
       },
       "minecraft:lore":[
        "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
-       "[{\"text\":\"在主手时 :\",\"color\":\"gray\",\"italic\":false}]",
+       "[{\"text\":\"在主手时：\",\"color\":\"gray\",\"italic\":false}]",
        "[{\"text\":\" 2 攻击伤害\",\"color\":\"dark_green\",\"italic\":false}]",
        "[{\"text\":\" 1000 攻击速度\",\"color\":\"dark_green\",\"italic\":false}]"
       ],

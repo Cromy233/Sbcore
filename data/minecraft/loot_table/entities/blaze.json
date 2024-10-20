@@ -97,34 +97,34 @@
                     "custom_name": "inferno",
                     "custom_effects": [
                       {
-                        "id": "strength",
+                        "id": "minecraft:strength",
                         "duration": 12000,
                         "amplifier": 0,
                         "show_particles": false
                       },
                       {
-                        "id": "regeneration",
+                        "id": "minecraft:regeneration",
                         "duration": 12000,
                         "amplifier": 0,
                         "show_particles": false
                       },
                       {
-                        "id": "instant_damage",
+                        "id": "minecraft:instant_damage",
                         "duration": 1,
                         "amplifier": 2                       
                       },
                       {
-                        "id": "slowness",
+                        "id": "minecraft:slowness",
                         "duration": 12000,
                         "amplifier": 0                          
                       },
                       {
-                        "id": "resistance",
+                        "id": "minecraft:resistance",
                         "duration": 12000,
                         "amplifier": 0                          
                       },
                       {
-                        "id": "bad_omen",
+                        "id": "minecraft:bad_omen",
                         "duration": 12000,
                         "amplifier": 4                          
                       }                      

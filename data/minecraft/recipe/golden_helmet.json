@@ -18,7 +18,7 @@
         "show_in_tooltip": true,
         "modifiers": [
           {
-            "id": "sbcore",
+            "id": "head",
             "type": "generic.oxygen_bonus",
             "slot": "head",
             "amount": 0.5,

@@ -36,29 +36,29 @@
                 },
                 "attribute_modifiers": [
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "head",
+                    "slot": "head",
                     "type": "generic.armor",
                     "amount": 3,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "head",
+                    "slot": "head",
                     "type": "generic.armor_toughness",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "head",
+                    "slot": "head",
                     "type": "generic.oxygen_bonus",
                     "amount": 8,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "head",
+                    "slot": "head",
                     "type": "player.submerged_mining_speed",
                     "amount": 4,
                     "operation": "add_multiplied_total"
@@ -105,29 +105,29 @@
                 },
                 "attribute_modifiers": [
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "chest",
+                    "slot": "chest",
                     "type": "generic.armor",
                     "amount": 8,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "chest",
+                    "slot": "chest",
                     "type": "generic.armor_toughness",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "chest",
+                    "slot": "chest",
                     "type": "generic.burning_time",
                     "amount": -1,
                     "operation": "add_multiplied_base"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "chest",
+                    "slot": "chest",
                     "type": "generic.attack_damage",
                     "amount": 1,
                     "operation": "add_value"
@@ -175,29 +175,29 @@
                 },
                 "attribute_modifiers": [
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "legs",
+                    "slot": "legs",
                     "type": "generic.armor",
                     "amount": 6,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "legs",
+                    "slot": "legs",
                     "type": "generic.armor_toughness",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "legs",
+                    "slot": "legs",
                     "type": "generic.fall_damage_multiplier",
                     "amount": -0.8,
                     "operation": "add_multiplied_base"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "legs",
+                    "slot": "legs",
                     "type": "player.sneaking_speed",
                     "amount": 0.5,
                     "operation": "add_value"
@@ -244,29 +244,29 @@
                 },
                 "attribute_modifiers": [
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "feet",
+                    "slot": "feet",
                     "type": "generic.armor",
                     "amount": 3,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "feet",
+                    "slot": "feet",
                     "type": "generic.armor_toughness",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "feet",
+                    "slot": "feet",
                     "type": "generic.water_movement_efficiency",
                     "amount": 1,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
-                    "slot": "armor",
+                    "id": "feet",
+                    "slot": "feet",
                     "type": "generic.movement_efficiency",
                     "amount": 1,
                     "operation": "add_value"
@@ -314,14 +314,14 @@
                 },
                 "attribute_modifiers": [
                   {
-                    "id": "sbcore",
+                    "id": "mainhand",
                     "slot": "mainhand",
                     "type": "generic.attack_damage",
                     "amount": 11,
                     "operation": "add_value"
                   },
                   {
-                    "id": "sbcore",
+                    "id": "mainhand",
                     "slot": "mainhand",
                     "type": "generic.attack_speed",
                     "amount": -3.1,
@@ -330,7 +330,7 @@
                 ],
                 "minecraft:lore":[
                   "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
-                  "[{\"text\":\"在主手时 :\",\"color\":\"gray\",\"italic\":false}]",
+                  "[{\"text\":\"在主手时：\",\"color\":\"gray\",\"italic\":false}]",
                   "[{\"text\":\" 12 攻击伤害\",\"color\":\"dark_green\",\"italic\":false}]",
                   "[{\"text\":\" 0.9 攻击速度\",\"color\":\"dark_green\",\"italic\":false}]"
               ]
@@ -375,14 +375,14 @@
                 },
                 "attribute_modifiers": [
                   {
-                    "id": "sbcore",
+                    "id": "offhand",
                     "slot": "offhand",
                     "type": "generic.scale",
                     "amount": -0.8,
                     "operation": "add_multiplied_base"
                   },
                   {
-                    "id": "sbcore",
+                    "id": "offhand",
                     "slot": "offhand",
                     "type": "generic.movement_speed",
                     "amount": -0.5,

@@ -23,25 +23,39 @@
         "show_in_tooltip": false,
         "modifiers": [
           {
-            "id": "sbcore",
+            "id": "mainhand",
             "type": "generic.attack_damage",
             "amount": 0.3,
             "operation": "add_multiplied_total",
-            "slot": "hand"
+            "slot": "mainhand"
           },
           {
-            "id": "sbcore",
+            "id": "mainhand",
             "type": "generic.attack_speed",
             "amount": -0.5,
             "operation": "add_multiplied_total",
-            "slot": "hand"
+            "slot": "mainhand"
+          },
+          {
+            "id": "offhand",
+            "type": "generic.attack_damage",
+            "amount": 0.3,
+            "operation": "add_multiplied_total",
+            "slot": "offhand"
+          },
+          {
+            "id": "offhand",
+            "type": "generic.attack_speed",
+            "amount": -0.5,
+            "operation": "add_multiplied_total",
+            "slot": "offhand"
           }
         ]
       },
       "minecraft:item_name":"{\"text\":\"有定契约\"}",
       "minecraft:lore":[
           "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
-          "[{\"text\":\"手持时 :\",\"color\":\"gray\",\"italic\":false}]",
+          "[{\"text\":\"手持时：\",\"color\":\"gray\",\"italic\":false}]",
           "[{\"text\":\"+30% 攻击伤害\",\"color\":\"blue\",\"italic\":false}]",
           "[{\"text\":\"-50% 攻击速度\",\"color\":\"red\",\"italic\":false}]"
       ],

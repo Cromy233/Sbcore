@@ -22,14 +22,14 @@
             "show_in_tooltip":false,
             "modifiers":[
                 {
-                    "id":"sbcore",
+                    "id":"mainhand",
                     "type":"generic.attack_damage",
                     "amount":6,
                     "slot":"mainhand",
                     "operation":"add_value"
                 },
                 {
-                    "id":"sbcore",
+                    "id":"mainhand",
                     "type":"generic.attack_speed",
                     "amount":-2.4,
                     "slot":"mainhand",
@@ -40,7 +40,7 @@
                     "minecraft:item_name":"{\"text\":\"杜兰德尔\"}",
                     "minecraft:lore":[
                         "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
-                        "[{\"text\":\"在主手时 :\",\"color\":\"gray\",\"italic\":false}]",
+                        "[{\"text\":\"在主手时：\",\"color\":\"gray\",\"italic\":false}]",
                         "[{\"text\":\" 7 攻击伤害\",\"color\":\"dark_green\",\"italic\":false}]",
                         "[{\"text\":\" 1.6 攻击速度\",\"color\":\"dark_green\",\"italic\":false}]"
                     ],

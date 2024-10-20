@@ -19,7 +19,7 @@
         "show_in_tooltip": true,
         "modifiers": [
           {
-            "id": "sbcore",
+            "id": "chest",
         "type": "generic.burning_time",
         "slot": "chest",
         "amount": -0.5,

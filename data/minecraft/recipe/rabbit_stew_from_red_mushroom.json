@@ -37,21 +37,21 @@
         "effects": [
           {
             "effect": {
-              "id": "speed",
+              "id": "minecraft:speed",
               "duration": 6000,
               "amplifier": 0
             }
           },
           {
             "effect": {
-              "id": "jump_boost",
+              "id": "minecraft:jump_boost",
               "duration": 6000,
               "amplifier": 0
             }
           },
           {
             "effect": {
-              "id": "absorption",
+              "id": "minecraft:absorption",
               "duration": 6000,
               "amplifier": 9
             }

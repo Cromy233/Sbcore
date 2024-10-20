@@ -21,8 +21,9 @@ execute at @e[type=minecraft:spectral_arrow] as @e[type=minecraft:fireball,sort=
 execute as @e[type=minecraft:spectral_arrow] run kill @s
 
 #小火球
-execute at @e[type=minecraft:small_fireball] run summon minecraft:wind_charge ~ ~ ~ {Fire:1b,Tags:["sbcore"]}
+execute at @e[type=minecraft:small_fireball] run summon minecraft:wind_charge ~ ~ ~ {Fire:20s,Tags:["sbcore"]}
 execute at @e[type=minecraft:small_fireball] as @e[type=minecraft:wind_charge,sort=nearest,limit=1,tag=sbcore] at @s run data modify entity @s Motion set from entity @e[type=minecraft:small_fireball,sort=nearest,limit=1] Motion
+execute at @e[type=minecraft:small_fireball] as @e[type=minecraft:wind_charge,sort=nearest,limit=1,tag=sbcore] at @s run data modify entity @s acceleration_power set from entity @e[type=minecraft:small_fireball,sort=nearest,limit=1] acceleration_power
 execute as @e[type=minecraft:small_fireball] run kill @s
 
 #大火球
@@ -75,3 +76,12 @@ execute at @e[type=minecraft:llama_spit] run summon minecraft:fireball ~ ~ ~ {Ta
 execute at @e[type=minecraft:llama_spit] as @e[type=minecraft:fireball,sort=nearest,limit=3,distance=..0.1,tag=sbcore] at @s run data modify entity @s Motion set from entity @e[type=minecraft:llama_spit,sort=nearest,limit=1] Motion
 execute at @e[type=minecraft:llama_spit] as @e[type=minecraft:fireball,sort=nearest,limit=3,distance=..0.1,tag=sbcore] run data merge entity @s {Item:{id:"minecraft:heavy_core"}}
 execute as @e[type=minecraft:llama_spit] run kill @s
+
+#潜影贝导弹
+execute at @e[type=minecraft:shulker_bullet,tag=!sbcore] run effect give @e[type=minecraft:shulker,limit=1,sort=nearest] instant_damage 1 0 true
+execute as @e[type=minecraft:shulker_bullet,tag=!sbcore] run tag @s add sbcore
+
+#大风弹
+execute at @e[type=minecraft:breeze_wind_charge] as @e[type=!minecraft:player,distance=..16] at @s run damage @a[distance=..2.5,gamemode=!spectator,limit=1,sort=nearest] 2.5 minecraft:mob_attack by @s
+execute at @e[type=minecraft:breeze_wind_charge] as @e[type=!minecraft:player,distance=..16] at @s run particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 normal
+execute as @e[type=minecraft:breeze_wind_charge] run kill @s

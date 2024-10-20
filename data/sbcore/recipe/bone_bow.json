@@ -23,7 +23,7 @@
                   "minecraft:attribute_modifiers": {
                     "modifiers":[
                         {
-                            "id":"sbcore",
+                            "id":"mainhand",
                             "type":"generic.movement_efficiency",
                             "amount":1.0,
                             "slot":"mainhand",

@@ -16,7 +16,7 @@
         "effects": [
           {
             "effect": {
-              "id": "dolphins_grace",
+              "id": "minecraft:dolphins_grace",
               "duration": 100,
               "amplifier": 0
             }
