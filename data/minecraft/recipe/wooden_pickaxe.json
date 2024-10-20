@@ -1,0 +1,59 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:wooden_pickaxe",
+    "components": {
+      "attribute_modifiers": {
+        "show_in_tooltip": false,
+        "modifiers": [
+          {
+            "id": "sbcore",
+            "type": "player.block_interaction_range",
+            "slot": "mainhand",
+            "amount": 3,
+            "operation": "add_value"
+          },
+          {
+            "id": "sbcore",
+            "type": "generic.attack_damage",
+            "slot": "mainhand",
+            "amount": 1,
+            "operation": "add_value"
+          },
+          {
+            "id": "sbcore",
+            "type": "generic.attack_speed",
+            "slot": "mainhand",
+            "amount": -2.8,
+            "operation": "add_value"
+          }
+        ]
+      },
+      "enchantments": {
+        "efficiency": 5
+      },
+      "minecraft:lore":[
+        "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
+        "[{\"text\":\"在主手时 :\",\"color\":\"gray\",\"italic\":false}]",
+        "[{\"text\":\" 2 攻击伤害\",\"color\":\"dark_green\",\"italic\":false}]",
+        "[{\"text\":\" 1.2 攻击速度\",\"color\":\"dark_green\",\"italic\":false}]",
+        "[{\"text\":\"+3 方块交互距离\",\"color\":\"blue\",\"italic\":false}]"
+       ]
+    }
+  }
+}

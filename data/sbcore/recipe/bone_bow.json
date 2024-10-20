@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:bone"
+    },
+    "X": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    " #X",
+    "# X",
+    " #X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:bow",
+    "components": {
+                  "minecraft:item_name":"{\"text\":\"骨弓\"}",
+                  "minecraft:max_damage": 192,
+                  "minecraft:attribute_modifiers": {
+                    "modifiers":[
+                        {
+                            "id":"sbcore",
+                            "type":"generic.movement_efficiency",
+                            "amount":1.0,
+                            "slot":"mainhand",
+                            "operation":"add_value"
+                        }
+                        ]
+                    }
+                  }
+              }
+          }

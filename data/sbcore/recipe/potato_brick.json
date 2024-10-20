@@ -1,0 +1,42 @@
+{
+    "type": "crafting_shapeless",
+    "category": "equipment",
+    "ingredients": [
+        {
+            "item": "minecraft:brick"
+        },
+        {
+            "item": "minecraft:nether_brick"
+        },
+        {
+            "item": "minecraft:copper_ingot"
+        },
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        {
+            "item": "minecraft:gold_ingot"
+        },
+        {
+            "item": "minecraft:netherite_ingot"
+        }
+    ],
+    "result": {
+        "id": "minecraft:iron_ingot",
+        "components": {
+            "tool": {
+                "rules": [
+                    {
+                        "blocks": "#sbcore:all_mineable",
+                        "correct_for_drops": true,
+                        "speed": 10
+                    }
+                ]
+            },
+            "enchantment_glint_override": true,
+            "max_stack_size": 1,
+            "rarity": "epic",
+            "custom_name": "{\"text\":\"至高板砖\",\"italic\":false}"
+        }
+    }
+}

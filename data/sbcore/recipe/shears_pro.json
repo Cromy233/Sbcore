@@ -1,0 +1,42 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+      "X": {
+        "item": "minecraft:shears"
+      },
+      "Y": {
+        "item": "minecraft:string"
+      }
+    },
+    "pattern": [
+      "  X",
+      " Y ",
+      "Y  "
+    ],
+    "result": {
+      "count": 1,
+      "id": "minecraft:shears",
+      "components": {
+        "minecraft:attribute_modifiers": {
+            "show_in_tooltip":true,
+            "modifiers":[
+                {
+                    "id":"sbcore",
+                    "type":"player.block_interaction_range",
+                    "amount":2,
+                    "slot":"mainhand",
+                    "operation":"add_value"
+                },
+                {
+                  "id":"sbcore",
+                  "type":"player.entity_interaction_range",
+                  "amount":2,
+                  "slot":"mainhand",
+                  "operation":"add_value"
+              }
+                ]
+            }
+                }
+            }
+      }

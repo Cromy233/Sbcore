@@ -1,0 +1,51 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+      "#": {
+      "tag": "minecraft:planks"
+      },
+      "X": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "pattern": [
+      "X#X",
+      "XXX",
+      " X "
+    ],
+    "result": {
+      "count": 1,
+      "id": "minecraft:shield",
+      "components": {
+                    "minecraft:item_name":"{\"text\":\"铁盾\"}",
+                    "minecraft:max_damage": 672,
+                    "minecraft:attribute_modifiers": {
+                        "show_in_tooltip":true,
+                        "modifiers":[
+                            {
+                                "id":"sbcore",
+                                "type":"generic.armor",
+                                "amount":3.0,
+                                "slot":"hand",
+                                "operation":"add_value"
+                            },
+                            {
+                                "id":"sbcore",
+                                "type":"generic.armor_toughness",
+                                "amount":1.0,
+                                "slot":"hand",
+                                "operation":"add_value"
+                            },
+                            {
+                                "id":"sbcore",
+                                "type":"generic.movement_speed",
+                                "amount":-0.2,
+                                "slot":"hand",
+                                "operation":"add_multiplied_base"
+                            }
+                          ]
+                      }
+                    }
+                }
+            }

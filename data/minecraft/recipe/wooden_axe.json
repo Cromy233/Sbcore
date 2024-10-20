@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " #",
+    "X#",
+    "XX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:wooden_axe",
+    "components": {
+       "attribute_modifiers": {
+        "show_in_tooltip": false,
+        "modifiers": [
+          {
+            "id": "sbcore",
+            "type": "generic.attack_damage",
+            "slot": "mainhand",
+            "amount": 14,
+            "operation": "add_value"
+          },
+          {
+            "id": "sbcore",
+            "type": "generic.attack_speed",
+            "slot": "mainhand",
+            "amount": -3.2,
+            "operation": "add_value"
+          }
+        ]
+       },
+       "minecraft:lore":[
+        "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
+        "[{\"text\":\"在主手时 :\",\"color\":\"gray\",\"italic\":false}]",
+        "[{\"text\":\" 15 攻击伤害\",\"color\":\"dark_green\",\"italic\":false}]",
+        "[{\"text\":\" 0.8 攻击速度\",\"color\":\"dark_green\",\"italic\":false}]"
+       ],
+       "enchantments":{
+          "unbreaking": 3
+       },
+       "max_damage": 1,
+       "damage": 1
+    }
+  }
+}

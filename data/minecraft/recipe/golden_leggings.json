@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:golden_leggings",
+    "components": {
+      "attribute_modifiers": {
+        "show_in_tooltip": true,
+        "modifiers": [
+          {
+            "id": "sbcore",
+            "type": "player.sneaking_speed",
+            "slot": "legs",
+            "amount": 0.5,
+            "operation": "add_multiplied_base"
+          }
+        ]
+      },
+      "max_damage": 156
+    }
+  }
+}

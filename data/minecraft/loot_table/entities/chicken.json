@@ -1,0 +1,251 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "functions": [
+              {
+                "add": false,
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 3.0,
+                  "min": -3.0
+                },
+                "function": "minecraft:set_count"
+              },
+              {
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 1.0,
+                  "min": 0.0
+                },
+                "enchantment": "minecraft:looting",
+                "function": "minecraft:enchanted_count_increase"
+              }
+            ],
+            "name": "minecraft:armadillo_scute"
+          }
+        ],
+        "rolls": 1.0
+      },
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "functions": [
+              {
+                "add": false,
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 3.0,
+                  "min": -3.0
+                },
+                "function": "minecraft:set_count"
+              },
+              {
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 1.0,
+                  "min": 0.0
+                },
+                "enchantment": "minecraft:looting",
+                "function": "minecraft:enchanted_count_increase"
+              }
+            ],
+            "name": "minecraft:turtle_scute"
+          }
+        ],
+        "rolls": 1.0
+      },
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "functions": [
+              {
+                "add": false,
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 3.0,
+                  "min": -3.0
+                },
+                "function": "minecraft:set_count"
+              },
+              {
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 1.0,
+                  "min": 0.0
+                },
+                "enchantment": "minecraft:looting",
+                "function": "minecraft:enchanted_count_increase"
+              }
+            ],
+            "name": "minecraft:egg"
+          }
+        ],
+        "rolls": 1.0
+      },
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "functions": [
+              {
+                "add": false,
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 3.0,
+                  "min": -3.0
+                },
+                "function": "minecraft:set_count"
+              },
+              {
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 1.0,
+                  "min": 0.0
+                },
+                "enchantment": "minecraft:looting",
+                "function": "minecraft:enchanted_count_increase"
+              }
+            ],
+            "name": "minecraft:feather"
+          }
+        ],
+        "rolls": 1.0
+      },
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "functions": [
+              {
+                "add": false,
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 3.0,
+                  "min": -3.0
+                },
+                "function": "minecraft:set_count"
+              },
+              {
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 1.0,
+                  "min": 0.0
+                },
+                "enchantment": "minecraft:looting",
+                "function": "minecraft:enchanted_count_increase"
+              }
+            ],
+            "name": "minecraft:rabbit_hide"
+          }
+        ],
+        "rolls": 1.0
+      },
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "functions": [
+              {
+                "add": false,
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 3.0,
+                  "min": -3.0
+                },
+                "function": "minecraft:set_count"
+              },
+              {
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 1.0,
+                  "min": 0.0
+                },
+                "enchantment": "minecraft:looting",
+                "function": "minecraft:enchanted_count_increase"
+              }
+            ],
+            "name": "minecraft:honeycomb"
+          }
+        ],
+        "rolls": 1.0
+      },
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "functions": [
+              {
+                "add": false,
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 3.0,
+                  "min": -3.0
+                },
+                "function": "minecraft:set_count"
+              },
+              {
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 1.0,
+                  "min": 0.0
+                },
+                "enchantment": "minecraft:looting",
+                "function": "minecraft:enchanted_count_increase"
+              }
+            ],
+            "name": "minecraft:rabbit_foot"
+          }
+        ],
+        "rolls": 1.0
+      }
+    ],
+    "random_sequence": "minecraft:entities/chicken"
+  }

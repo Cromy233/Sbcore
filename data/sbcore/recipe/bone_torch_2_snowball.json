@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shapeless",
+    "category": "equipment",
+    "ingredients": [
+        {
+            "item": "minecraft:redstone_torch"
+        },
+        {
+            "item": "minecraft:bone_meal"
+        }
+    ],
+    "result": {
+        "id": "minecraft:snowball",
+        "count": 2
+    }
+}

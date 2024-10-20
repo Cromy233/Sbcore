@@ -1,0 +1,455 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.3,
+            "per_level_above_first": 0.05
+          },
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_helmet",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "rarity": "epic",
+                "max_damage": 363,
+                "enchantments": {
+                  "minecraft:mending": 1,
+                  "minecraft:unbreaking": 3,
+                  "minecraft:thorns": 4,
+                  "protection": 3
+                },
+                "attribute_modifiers": [
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.armor",
+                    "amount": 3,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.armor_toughness",
+                    "amount": 2,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.oxygen_bonus",
+                    "amount": 8,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "player.submerged_mining_speed",
+                    "amount": 4,
+                    "operation": "add_multiplied_total"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.3,
+            "per_level_above_first": 0.05
+          },
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_chestplate",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "rarity": "epic",
+                "enchantments": {
+                  "minecraft:mending": 1,
+                  "minecraft:unbreaking": 3,
+                  "minecraft:projectile_protection": 5,
+                  "protection": 3
+                },
+                "attribute_modifiers": [
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.armor",
+                    "amount": 8,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.armor_toughness",
+                    "amount": 2,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.burning_time",
+                    "amount": -1,
+                    "operation": "add_multiplied_base"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.attack_damage",
+                    "amount": 1,
+                    "operation": "add_value"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.3,
+            "per_level_above_first": 0.05
+          },
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_leggings",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "rarity": "epic",
+                "max_damage": 495,
+                "enchantments": {
+                  "minecraft:mending": 1,
+                  "minecraft:unbreaking": 3,
+                  "minecraft:thorns": 4,
+                  "protection": 3
+                },
+                "attribute_modifiers": [
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.armor",
+                    "amount": 6,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.armor_toughness",
+                    "amount": 2,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.fall_damage_multiplier",
+                    "amount": -0.8,
+                    "operation": "add_multiplied_base"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "player.sneaking_speed",
+                    "amount": 0.5,
+                    "operation": "add_value"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.3,
+            "per_level_above_first": 0.05
+          },
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_boots",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "rarity": "epic",
+                "enchantments": {
+                  "minecraft:mending": 1,
+                  "minecraft:unbreaking": 3,
+                  "minecraft:blast_protection": 5,
+                  "protection": 3
+                },
+                "attribute_modifiers": [
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.armor",
+                    "amount": 3,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.armor_toughness",
+                    "amount": 2,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.water_movement_efficiency",
+                    "amount": 1,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "armor",
+                    "type": "generic.movement_efficiency",
+                    "amount": 1,
+                    "operation": "add_value"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.3,
+            "per_level_above_first": 0.05
+          },
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:trident",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "rarity": "epic",
+                "enchantments": {
+                  "minecraft:knockback": 2,
+                  "minecraft:sharpness": 5,
+                  "minecraft:loyalty": 5,
+                  "looting": 3,
+                  "unbreaking": 3
+                },
+                "attribute_modifiers": [
+                  {
+                    "id": "sbcore",
+                    "slot": "mainhand",
+                    "type": "generic.attack_damage",
+                    "amount": 11,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "mainhand",
+                    "type": "generic.attack_speed",
+                    "amount": -3.1,
+                    "operation": "add_value"
+                  }
+                ],
+                "minecraft:lore":[
+                  "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
+                  "[{\"text\":\"在主手时 :\",\"color\":\"gray\",\"italic\":false}]",
+                  "[{\"text\":\" 12 攻击伤害\",\"color\":\"dark_green\",\"italic\":false}]",
+                  "[{\"text\":\" 0.9 攻击速度\",\"color\":\"dark_green\",\"italic\":false}]"
+              ]
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.3,
+            "per_level_above_first": 0.05
+          },
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:fishing_rod",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "rarity": "epic",
+                "enchantments": {
+                  "minecraft:mending": 1,
+                  "minecraft:unbreaking": 3,
+                  "minecraft:luck_of_the_sea": 3,
+                  "lure": 5
+                },
+                "attribute_modifiers": [
+                  {
+                    "id": "sbcore",
+                    "slot": "offhand",
+                    "type": "generic.scale",
+                    "amount": -0.8,
+                    "operation": "add_multiplied_base"
+                  },
+                  {
+                    "id": "sbcore",
+                    "slot": "offhand",
+                    "type": "generic.movement_speed",
+                    "amount": -0.5,
+                    "operation": "add_multiplied_base"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 50
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "enchanted_count_increase",
+              "enchantment": "minecraft:looting",
+              "count": {
+                "max": 0.1,
+                "min": 0.0
+              }
+            }
+          ],
+          "weight": 100
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tide_armor_trim_smithing_template",
+          "weight": 10
+        }
+      ],
+      "rolls": 16.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:experience_bottle",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 4.0,
+                "min": -2.0
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 16.0
+    }
+  ],
+  "random_sequence": "minecraft:entities/elder_guardian"
+}

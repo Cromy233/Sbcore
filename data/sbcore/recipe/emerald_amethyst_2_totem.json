@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+      "X": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "#": {
+        "item": "minecraft:emerald"
+      },
+      "Y": {
+        "item": "minecraft:honeycomb"
+      }
+    },
+    "pattern": [
+      "YXY",
+      "X#X",
+      "YXY"
+    ],
+    "result": {
+      "count": 1,
+      "id": "minecraft:totem_of_undying"
+    }
+  }

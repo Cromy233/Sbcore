@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "X": {
+      "item": "minecraft:cocoa_beans"
+    }
+  },
+  "pattern": [
+    "#X#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "minecraft:cookie",
+    "components": {
+      "minecraft:food": {
+        "nutrition": 2,
+        "saturation": 1,
+        "effects": [
+          {
+            "effect": {
+              "id": "minecraft:regeneration",
+              "duration": 200,
+              "amplifier": 0
+              }
+          }
+        ]
+      }
+    }
+  }
+}

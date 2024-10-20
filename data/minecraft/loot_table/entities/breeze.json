@@ -1,0 +1,62 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "functions": [
+              {
+                "add": false,
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 8.0,
+                  "min": 1.0
+                },
+                "function": "minecraft:set_count"
+              },
+              {
+                "count": {
+                  "type": "minecraft:uniform",
+                  "max": 4.0,
+                  "min": 1.0
+                },
+                "enchantment": "minecraft:looting",
+                "function": "minecraft:enchanted_count_increase"
+              },
+              {
+                "function": "set_components",
+                "components": {
+                  "rarity": "uncommon",
+                  "minecraft:item_name": "{\"text\":\"至高马铃薯\"}",
+                  "minecraft:food": {
+                    "nutrition": 5,
+                    "saturation": 6,
+                    "can_always_eat":true,
+                    "effects": [
+                      {
+                        "effect": {
+                          "id": "minecraft:absorption",
+                          "duration": 600,
+                          "amplifier": 4
+                          }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "name": "minecraft:baked_potato"
+          }
+        ],
+        "rolls": 1.0
+      }
+    ],
+    "random_sequence": "minecraft:entities/breeze"
+  }

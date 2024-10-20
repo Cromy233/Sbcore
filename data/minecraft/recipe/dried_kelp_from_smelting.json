@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "minecraft:kelp"
+  },
+  "result": {
+    "id": "minecraft:dried_kelp",
+    "components": {
+      "food": {
+        "nutrition": 1,
+        "saturation": 1,
+        "eat_seconds": 0.4,
+        "effects": [
+          {
+            "effect": {
+              "id": "dolphins_grace",
+              "duration": 100,
+              "amplifier": 0
+            }
+          }
+        ]
+      }
+    }
+  }
+}

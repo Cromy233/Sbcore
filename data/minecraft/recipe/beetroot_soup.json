@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:beetroot_soup",
+    "components": {
+      "max_stack_size": 16,
+      "food": {
+        "nutrition": 4,
+        "saturation": 7,
+        "using_converts_to": {
+          "id": "bowl"
+        },
+        "effects": [
+          {
+            "effect": {
+              "id": "instant_health",
+              "duration": 1,
+              "amplifier": 0
+            }
+          }
+        ]
+      }
+    }
+  }
+}

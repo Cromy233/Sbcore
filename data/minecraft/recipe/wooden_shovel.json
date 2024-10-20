@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "#",
+    "#",
+    "X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:wooden_shovel",
+    "components": {
+      "enchantments": {
+        "aqua_affinity": 1,
+        "bane_of_arthropods": 1,
+        "binding_curse": 1,
+        "blast_protection": 1,
+        "breach": 1,
+        "channeling": 1,
+        "density": 1,
+        "depth_strider": 1,
+        "efficiency": 1,
+        "feather_falling": 1,
+        "fire_aspect": 1,
+        "fire_protection": 1,
+        "flame": 1,
+        "fortune": 1,
+        "frost_walker": 1,
+        "impaling": 1,
+        "infinity": 1,
+        "knockback": 1,
+        "looting": 1,
+        "loyalty": 1,
+        "luck_of_the_sea": 1,
+        "lure": 1,
+        "mending": 1
+      },
+      "attribute_modifiers": {
+        "show_in_tooltip": false,
+        "modifiers": []
+      }
+    }
+  }
+}

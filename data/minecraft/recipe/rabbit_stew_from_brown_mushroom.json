@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "rabbit_stew",
+  "ingredients": [
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:cooked_rabbit"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:beetroot_soup"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:rabbit_stew",
+    "components": {
+      "custom_name": "{\"text\":\"兔肉煲 (棕色蘑菇)\",\"italic\":false}",
+      "food": {
+        "eat_seconds": 3.2,
+        "nutrition": 20,
+        "saturation": 24,
+        "using_converts_to": {
+          "id": "minecraft:bowl"
+        },
+        "effects": [
+          {
+            "effect": {
+              "id": "speed",
+              "duration": 6000,
+              "amplifier": 1
+            }
+          },
+          {
+            "effect": {
+              "id": "jump_boost",
+              "duration": 6000,
+              "amplifier": 1
+            }
+          },
+          {
+            "effect": {
+              "id": "absorption",
+              "duration": 6000,
+              "amplifier": 4
+            }
+          }
+        ]
+      }
+    }
+  }
+}
