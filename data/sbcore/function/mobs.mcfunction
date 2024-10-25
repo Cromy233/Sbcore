@@ -180,7 +180,7 @@ execute at @e[type=minecraft:magma_cube,tag=sbcore] run fill ~ ~ ~ ~ ~ ~ fire re
 execute at @e[type=minecraft:magma_cube,tag=sbcore] as @e[type=minecraft:arrow,distance=..2.5] run data merge entity @s {Fire:20s}
 
 #监守者
-execute as @e[type=minecraft:warden,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.max_health",base:100},{id:"generic.scale",base:0.9},{id:"generic.water_movement_efficiency",base:1}]}
+execute as @e[type=minecraft:warden,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.max_health",base:150},{id:"generic.scale",base:0.9},{id:"generic.water_movement_efficiency",base:1}]}
 execute as @e[type=minecraft:warden,tag=sbcore,nbt={Brain:{memories:{"minecraft:sonic_boom_cooldown":{value:{},ttl:0L}}}}] run data merge entity @s {Brain:{memories:{"minecraft:sonic_boom_cooldown":{value:{},ttl:1200L}}}}
 #execute at @e[type=minecraft:warden,tag=sbcore] run effect clear @a[distance=..16,gamemode=!spectator] darkness
 

@@ -55,3 +55,5 @@ execute at @e[type=item,nbt={Item:{id:"minecraft:evoker_spawn_egg"}}] run summon
 execute as @e[type=item,nbt={Item:{id:"minecraft:evoker_spawn_egg"}}] run kill @s
 execute at @e[type=item,nbt={Item:{id:"minecraft:magma_cube_spawn_egg"}}] run summon minecraft:magma_cube ~ ~ ~
 execute as @e[type=item,nbt={Item:{id:"minecraft:magma_cube_spawn_egg"}}] run kill @s
+execute at @e[type=item,nbt={Item:{id:"minecraft:breeze_spawn_egg"}}] run summon minecraft:breeze ~ ~ ~
+execute as @e[type=item,nbt={Item:{id:"minecraft:breeze_spawn_egg"}}] run kill @s

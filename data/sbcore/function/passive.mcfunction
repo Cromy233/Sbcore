@@ -32,7 +32,9 @@ execute at @e[type=minecraft:wandering_trader] run effect give @a[distance=..7.5
 execute as @e[type=minecraft:sheep,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],ArmorDropChances:[0f,0f,0f,0f],ArmorItems:[{},{},{id:"minecraft:diamond_chestplate",components:{enchantments:{levels:{"minecraft:thorns":5,"minecraft:protection":5}}}},{}]}
 
 #蝙蝠
-execute at @e[type=minecraft:bat] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:deepslate_coal_ore replace minecraft:coal_ore
+execute at @e[type=minecraft:bat] run fill ~-5 ~-5 ~-5 ~5 ~5 ~5 minecraft:deepslate_coal_ore replace minecraft:coal_ore
+execute as @e[type=minecraft:bat] at @s if entity @a[distance=..1] run damage @p 1 minecraft:mob_attack by @s
+execute as @e[type=minecraft:bat] at @s if entity @a[distance=..1] run effect give @s regeneration 1 2 false
 
 #猪
 execute as @e[type=minecraft:pig,tag=!sbcore,nbt={Saddle:1b}] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.movement_speed",base:1.5},{id:"generic.max_health",base:2},{id:"generic.knockback_resistance",base:1}]}
@@ -49,7 +51,7 @@ execute as @e[type=minecraft:zoglin,tag=!sbcore] run data merge entity @s {Tags:
 #青蛙
 execute as @e[type=minecraft:frog,tag=!sbcore] at @s if entity @e[distance=..5,type=!minecraft:frog,type=!minecraft:player] run data modify entity @s Motion set from entity @e[type=!minecraft:frog,limit=1,sort=nearest,type=!minecraft:player] Motion
 execute as @e[type=minecraft:frog,tag=!sbcore] at @s if entity @e[distance=..5,type=!minecraft:frog,type=!minecraft:player] run data modify entity @s Rotation set from entity @e[type=!minecraft:frog,limit=1,sort=nearest,type=!minecraft:player] Rotation
-execute at @e[type=minecraft:frog,tag=!sbcore] as @e[type=!minecraft:frog,distance=..2.5] run damage @s 2.0 minecraft:mob_attack by @e[type=minecraft:frog,tag=!sbcore,limit=1,sort=nearest]
+execute at @e[type=minecraft:frog,tag=!sbcore] as @e[type=!minecraft:frog,distance=..2] run damage @s 2.0 minecraft:mob_attack by @e[type=minecraft:frog,tag=!sbcore,limit=1,sort=nearest]
 
 #鱿鱼
 execute as @e[type=minecraft:squid,tag=!sbcore] run effect give @s invisibility infinite 255 true

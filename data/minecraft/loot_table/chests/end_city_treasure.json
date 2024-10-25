@@ -157,7 +157,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "max": 59.0,
-                "min": 10.0
+                "min": 20.0
               },
               "options": "#minecraft:on_random_loot"
             }

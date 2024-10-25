@@ -51,9 +51,11 @@ execute as @e[type=minecraft:snowball,tag=!sbcore] at @s unless block ~ ~-1 ~ ai
 #execute as @e[type=minecraft:snowball] run kill @s
 
 #鸡蛋
-execute at @e[type=minecraft:egg] as @e[type=arrow,distance=..32,nbt={inGround:0b}] run data merge entity @s {NoGravity:0b}
+execute at @e[type=minecraft:egg] as @e[type=minecraft:arrow,distance=..32,nbt={inGround:0b}] run data merge entity @s {NoGravity:0b}
+execute at @e[type=minecraft:egg] at @e[type=minecraft:magma_cube,distance=..32,nbt={NoGravity:1b}] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
+execute at @e[type=minecraft:egg] as @e[type=minecraft:magma_cube,distance=..32,nbt={NoGravity:1b}] run data merge entity @s {NoGravity:0b}
 execute at @e[type=minecraft:egg] run playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 10 1
-execute at @e[type=minecraft:egg] at @e[type=arrow,distance=..32,nbt={inGround:0b}] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
+execute at @e[type=minecraft:egg] at @e[type=minecraft:arrow,distance=..32,nbt={inGround:0b}] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
 execute as @e[type=minecraft:egg] run kill @s
 
 #唤魔者尖牙
@@ -85,3 +87,17 @@ execute as @e[type=minecraft:shulker_bullet,tag=!sbcore] run tag @s add sbcore
 execute at @e[type=minecraft:breeze_wind_charge] as @e[type=!minecraft:player,distance=..16] at @s run damage @a[distance=..2.5,gamemode=!spectator,limit=1,sort=nearest] 2.5 minecraft:mob_attack by @s
 execute at @e[type=minecraft:breeze_wind_charge] as @e[type=!minecraft:player,distance=..16] at @s run particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 normal
 execute as @e[type=minecraft:breeze_wind_charge] run kill @s
+
+#玩家等级粒子
+execute at @a[level=30..39] run particle minecraft:crit ~ ~0.2 ~ 0.2 0.2 0.2 0 1 normal
+execute at @a[level=40..59] run particle minecraft:effect ~ ~ ~ 0.2 0 0.2 0 1 normal
+execute at @a[level=60..69] run particle minecraft:enchant ~ ~1 ~ 0.2 0.4 0.2 0.5 1 normal
+execute at @a[level=70..79] run particle minecraft:enchant ~ ~1 ~ 0.25 0.4 0.25 0.75 1 normal
+execute at @a[level=80..89] run particle minecraft:enchant ~ ~1 ~ 0.3 0.4 0.3 1 1 normal
+execute at @a[level=90..99] run particle minecraft:enchant ~ ~1 ~ 0.35 0.4 0.35 1.25 1 normal
+execute at @a[level=100..149] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
+execute at @a[level=150..299] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.01 1 normal
+execute at @a[level=300..499] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.05 1 normal
+execute at @a[level=500..999] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.2 2 normal
+execute at @a[level=1000..] run particle minecraft:enchant ~ ~1 ~ 5 5 5 10 50 normal
+execute at @a[level=1000..] run xp add @a[distance=..5] 1 points

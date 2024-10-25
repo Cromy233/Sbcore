@@ -64,7 +64,7 @@
                   ]
                 },
                 "enchantments": {
-                  "looting": 4
+                  "minecraft:looting": 4
                 },
                 "lore": [
                   "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
@@ -78,6 +78,79 @@
             }
           ],
           "name": "minecraft:iron_axe"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "killed_by_player"
+            },
+            {
+              "condition": "random_chance_with_enchanted_bonus",
+              "unenchanted_chance": 0.5,
+              "enchanted_chance": {
+                "type": "linear",
+                "base": 0.6,
+                "per_level_above_first": 0.1
+              },
+              "enchantment": "minecraft:density"
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "attribute_modifiers": {
+                  "show_in_tooltip": true,
+                  "modifiers": [
+                    {
+                      "id": "chest",
+                      "slot": "chest",
+                      "type": "generic.armor",
+                      "amount": 5,
+                      "operation": "add_value"
+                    },
+                    {
+                      "id": "chest",
+                      "slot": "chest",
+                      "type": "generic.armor_toughness",
+                      "amount": 2,
+                      "operation": "add_value"
+                    },
+                    {
+                      "id": "chest",
+                      "slot": "chest",
+                      "type": "generic.attack_damage",
+                      "amount": 1,
+                      "operation": "add_value"
+                    },
+                    {
+                      "id": "chest",
+                      "slot": "chest",
+                      "type": "generic.movement_speed",
+                      "amount": -0.2,
+                      "operation": "add_multiplied_base"
+                    }
+                  ]
+                },
+                "enchantments": {
+                  "minecraft:protection": 3
+                }
+              }
+            }
+          ],
+          "name": "minecraft:chainmail_chestplate"
         }
       ],
       "rolls": 1.0

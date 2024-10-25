@@ -151,6 +151,69 @@
         }
       ],
       "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "killed_by_player"
+            },
+            {
+              "condition": "random_chance_with_enchanted_bonus",
+              "unenchanted_chance": 0.05,
+              "enchanted_chance": {
+                "type": "linear",
+                "base": 0.07,
+                "per_level_above_first": 0.015
+              },
+              "enchantment": "minecraft:looting"
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "attribute_modifiers": {
+                  "show_in_tooltip": true,
+                  "modifiers": [
+                    {
+                      "id": "mainhand",
+                      "slot": "mainhand",
+                      "type": "player.mining_efficiency",
+                      "amount": 2,
+                      "operation": "add_value"
+                    }
+                  ]
+                },
+                "enchantments": {
+                  "minecraft:unbreaking": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "max": 1.0,
+                "min": 0.0
+              }
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "only_compatible": true
+            }
+          ],
+          "name": "minecraft:golden_pickaxe"
+        }
+      ],
+      "rolls": 1.0
     }
   ],
   "random_sequence": "minecraft:entities/magma_cube"

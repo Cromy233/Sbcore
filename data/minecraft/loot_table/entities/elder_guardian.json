@@ -31,8 +31,7 @@
                 "enchantments": {
                   "minecraft:mending": 1,
                   "minecraft:unbreaking": 3,
-                  "minecraft:thorns": 4,
-                  "protection": 3
+                  "minecraft:thorns": 4
                 },
                 "attribute_modifiers": [
                   {
@@ -53,15 +52,36 @@
                     "id": "head",
                     "slot": "head",
                     "type": "generic.oxygen_bonus",
-                    "amount": 8,
+                    "amount": 2,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "head",
+                    "slot": "head",
+                    "type": "generic.water_movement_efficiency",
+                    "amount": 0.25,
                     "operation": "add_value"
                   },
                   {
                     "id": "head",
                     "slot": "head",
                     "type": "player.submerged_mining_speed",
-                    "amount": 4,
+                    "amount": 1,
                     "operation": "add_multiplied_total"
+                  },
+                  {
+                    "id": "head",
+                    "slot": "head",
+                    "type": "generic.burning_time",
+                    "amount": -0.25,
+                    "operation": "add_multiplied_base"
+                  },
+                  {
+                    "id": "head",
+                    "slot": "head",
+                    "type": "generic.fall_damage_multiplier",
+                    "amount": -0.2,
+                    "operation": "add_multiplied_base"
                   }
                 ]
               }
@@ -100,8 +120,7 @@
                 "enchantments": {
                   "minecraft:mending": 1,
                   "minecraft:unbreaking": 3,
-                  "minecraft:projectile_protection": 5,
-                  "protection": 3
+                  "protection": 4
                 },
                 "attribute_modifiers": [
                   {
@@ -121,16 +140,37 @@
                   {
                     "id": "chest",
                     "slot": "chest",
+                    "type": "generic.oxygen_bonus",
+                    "amount": 2,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "chest",
+                    "slot": "chest",
+                    "type": "generic.water_movement_efficiency",
+                    "amount": 0.25,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "chest",
+                    "slot": "chest",
+                    "type": "player.submerged_mining_speed",
+                    "amount": 1,
+                    "operation": "add_multiplied_total"
+                  },
+                  {
+                    "id": "chest",
+                    "slot": "chest",
                     "type": "generic.burning_time",
-                    "amount": -1,
+                    "amount": -0.25,
                     "operation": "add_multiplied_base"
                   },
                   {
                     "id": "chest",
                     "slot": "chest",
-                    "type": "generic.attack_damage",
-                    "amount": 1,
-                    "operation": "add_value"
+                    "type": "generic.fall_damage_multiplier",
+                    "amount": -0.2,
+                    "operation": "add_multiplied_base"
                   }
                 ]
               }
@@ -170,8 +210,7 @@
                 "enchantments": {
                   "minecraft:mending": 1,
                   "minecraft:unbreaking": 3,
-                  "minecraft:thorns": 4,
-                  "protection": 3
+                  "minecraft:thorns": 4
                 },
                 "attribute_modifiers": [
                   {
@@ -191,16 +230,37 @@
                   {
                     "id": "legs",
                     "slot": "legs",
-                    "type": "generic.fall_damage_multiplier",
-                    "amount": -0.8,
+                    "type": "generic.oxygen_bonus",
+                    "amount": 2,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "legs",
+                    "slot": "legs",
+                    "type": "generic.water_movement_efficiency",
+                    "amount": 0.25,
+                    "operation": "add_value"
+                  },
+                  {
+                    "id": "legs",
+                    "slot": "legs",
+                    "type": "player.submerged_mining_speed",
+                    "amount": 1,
+                    "operation": "add_multiplied_total"
+                  },
+                  {
+                    "id": "legs",
+                    "slot": "legs",
+                    "type": "generic.burning_time",
+                    "amount": -0.25,
                     "operation": "add_multiplied_base"
                   },
                   {
                     "id": "legs",
                     "slot": "legs",
-                    "type": "player.sneaking_speed",
-                    "amount": 0.5,
-                    "operation": "add_value"
+                    "type": "generic.fall_damage_multiplier",
+                    "amount": -0.2,
+                    "operation": "add_multiplied_base"
                   }
                 ]
               }
@@ -239,8 +299,7 @@
                 "enchantments": {
                   "minecraft:mending": 1,
                   "minecraft:unbreaking": 3,
-                  "minecraft:blast_protection": 5,
-                  "protection": 3
+                  "protection": 4
                 },
                 "attribute_modifiers": [
                   {
@@ -260,16 +319,37 @@
                   {
                     "id": "feet",
                     "slot": "feet",
-                    "type": "generic.water_movement_efficiency",
-                    "amount": 1,
+                    "type": "generic.oxygen_bonus",
+                    "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "id": "feet",
                     "slot": "feet",
-                    "type": "generic.movement_efficiency",
-                    "amount": 1,
+                    "type": "generic.water_movement_efficiency",
+                    "amount": 0.25,
                     "operation": "add_value"
+                  },
+                  {
+                    "id": "feet",
+                    "slot": "feet",
+                    "type": "player.submerged_mining_speed",
+                    "amount": 1,
+                    "operation": "add_multiplied_total"
+                  },
+                  {
+                    "id": "feet",
+                    "slot": "feet",
+                    "type": "generic.burning_time",
+                    "amount": -0.25,
+                    "operation": "add_multiplied_base"
+                  },
+                  {
+                    "id": "feet",
+                    "slot": "feet",
+                    "type": "generic.fall_damage_multiplier",
+                    "amount": -0.2,
+                    "operation": "add_multiplied_base"
                   }
                 ]
               }
@@ -312,22 +392,25 @@
                   "looting": 3,
                   "unbreaking": 3
                 },
-                "attribute_modifiers": [
-                  {
-                    "id": "mainhand",
-                    "slot": "mainhand",
-                    "type": "generic.attack_damage",
-                    "amount": 11,
-                    "operation": "add_value"
-                  },
-                  {
-                    "id": "mainhand",
-                    "slot": "mainhand",
-                    "type": "generic.attack_speed",
-                    "amount": -3.1,
-                    "operation": "add_value"
-                  }
-                ],
+                "attribute_modifiers": {
+                  "show_in_tooltip": false,
+                  "modifiers": [
+                    {
+                      "id": "mainhand",
+                      "slot": "mainhand",
+                      "type": "generic.attack_damage",
+                      "amount": 11,
+                      "operation": "add_value"
+                    },
+                    {
+                      "id": "mainhand",
+                      "slot": "mainhand",
+                      "type": "generic.attack_speed",
+                      "amount": -3.1,
+                      "operation": "add_value"
+                    }
+                  ]
+                },
                 "minecraft:lore":[
                   "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
                   "[{\"text\":\"在主手时：\",\"color\":\"gray\",\"italic\":false}]",

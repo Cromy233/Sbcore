@@ -1,0 +1,81 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:pumpkin"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:pumpkin_pie",
+    "components": {
+      "food": {
+        "nutrition": 8,
+        "saturation": 5,
+        "effects": [
+          {
+            "effect": {
+              "id": "minecraft:absorption",
+              "duration": 300
+            },
+            "probability": 0.1
+          },
+          {
+            "effect": {
+              "id": "minecraft:haste",
+              "duration": 300
+            },
+            "probability": 0.1
+          },
+          {
+            "effect": {
+              "id": "minecraft:regeneration",
+              "duration": 300
+            },
+            "probability": 0.1
+          },
+          {
+            "effect": {
+              "id": "minecraft:instant_health"
+            },
+            "probability": 0.1
+          },
+          {
+            "effect": {
+              "id": "minecraft:luck",
+              "duration": 300
+            },
+            "probability": 0.1
+          },
+          {
+            "effect": {
+              "id": "minecraft:resistance",
+              "duration": 300
+            },
+            "probability": 0.1
+          },
+          {
+            "effect": {
+              "id": "minecraft:saturation"
+            },
+            "probability": 0.1
+          },
+          {
+            "effect": {
+              "id": "minecraft:strength",
+              "duration": 300
+            },
+            "probability": 0.1
+          }
+        ]
+      }
+    }
+  }
+}
