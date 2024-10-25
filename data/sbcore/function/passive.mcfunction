@@ -15,7 +15,8 @@ execute as @e[type=minecraft:bee,tag=!sbcore] run tp @s 0 -150 0
 execute as @e[type=minecraft:bee,tag=!sbcore] run kill @s
 
 #铁傀儡
-execute as @e[type=minecraft:iron_golem] run effect give @s minecraft:regeneration infinite 0 true
+execute as @e[type=minecraft:iron_golem,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.water_movement_efficiency",base:1},{id:"generic.knockback_resistance",base:0.9}]}
+execute as @e[type=minecraft:iron_golem,tag=sbcore] run effect give @s minecraft:regeneration infinite 0 true
 
 #流浪商人
 execute as @e[type=minecraft:wandering_trader] at @s run tp @s ~ ~ ~ ~18 ~
@@ -33,8 +34,14 @@ execute as @e[type=minecraft:sheep,tag=!sbcore] run data merge entity @s {Tags:[
 
 #蝙蝠
 execute at @e[type=minecraft:bat] run fill ~-5 ~-5 ~-5 ~5 ~5 ~5 minecraft:deepslate_coal_ore replace minecraft:coal_ore
-execute as @e[type=minecraft:bat] at @s if entity @a[distance=..1] run damage @p 1 minecraft:mob_attack by @s
-execute as @e[type=minecraft:bat] at @s if entity @a[distance=..1] run effect give @s regeneration 1 2 false
+execute as @e[type=minecraft:bat] at @s if entity @a[distance=..1,gamemode=!spectator] run damage @p 1 minecraft:mob_attack by @s
+execute as @e[type=minecraft:bat] at @s if entity @a[distance=..1,gamemode=!spectator] run effect give @s instant_health 1 0 false
+
+execute as @e[type=minecraft:bat] at @s if entity @e[distance=..1,type=minecraft:iron_golem] run damage @e[sort=nearest,limit=1,type=minecraft:iron_golem] 1 minecraft:mob_attack by @s
+execute as @e[type=minecraft:bat] at @s if entity @e[distance=..1,type=minecraft:iron_golem] run effect give @s instant_health 1 0 false
+
+#execute as @e[type=minecraft:bat] at @s if entity @e[distance=..1,type=!minecraft:player] run damage @e[sort=nearest,limit=1,type=!minecraft:player] 1 minecraft:mob_attack by @s
+#execute as @e[type=minecraft:bat] at @s if entity @e[distance=..1,type=!minecraft:player,type=!minecraft:bat] run effect give @s instant_health 1 0 false
 
 #猪
 execute as @e[type=minecraft:pig,tag=!sbcore,nbt={Saddle:1b}] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.movement_speed",base:1.5},{id:"generic.max_health",base:2},{id:"generic.knockback_resistance",base:1}]}

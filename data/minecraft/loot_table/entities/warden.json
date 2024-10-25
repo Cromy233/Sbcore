@@ -95,15 +95,15 @@
                 "minecraft:lore":[
                   "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
                   "[{\"text\":\"手持时：\",\"color\":\"gray\",\"italic\":false}]",
-                  "[{\"text\":\"-50% 移动速度\",\"color\":\"blue\",\"italic\":false}]"
+                  "[{\"text\":\"-40% 移动速度\",\"color\":\"blue\",\"italic\":false}]"
               ]
               }
             },
             {
               "function": "set_damage",
               "damage": {
-                "max": 1.0,
-                "min": 0.8
+                "max": 0.2,
+                "min": 0.0
               }
             }
           ]

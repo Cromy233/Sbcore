@@ -198,7 +198,7 @@ execute as @e[type=minecraft:husk,tag=!sbcore] at @s if entity @a[distance=..1.5
 
 #守卫者
 execute as @e[type=minecraft:guardian,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],Health:20}
-execute as @e[type=minecraft:guardian,tag=sbcore] at @s as @e[distance=..1.5,type=!minecraft:guardian,type=!minecraft:player] at @s run tp @s ~ ~ ~ ~180 ~
+execute as @e[type=minecraft:guardian,tag=sbcore] at @s as @e[distance=..1.5,type=!minecraft:guardian,type=!minecraft:player,type=!minecraft:elder_guardian] at @s run tp @s ~ ~ ~ ~180 ~
 execute as @e[type=minecraft:guardian,tag=sbcore] at @s as @a[distance=..1.5,gamemode=!spectator] at @s run tp @s ~ ~ ~ ~180 ~
 execute as @e[type=minecraft:guardian,tag=sbcore] at @s run effect give @a[distance=..1.5,gamemode=!spectator] blindness 2 0 true
 execute as @e[type=minecraft:guardian,tag=sbcore] at @s at @a[distance=..1.5,gamemode=!spectator] run particle sonic_boom ^ ^1 ^0.5 0 0 0 1 1 normal

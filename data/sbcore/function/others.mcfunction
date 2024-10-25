@@ -84,20 +84,30 @@ execute at @e[type=minecraft:shulker_bullet,tag=!sbcore] run effect give @e[type
 execute as @e[type=minecraft:shulker_bullet,tag=!sbcore] run tag @s add sbcore
 
 #大风弹
-execute at @e[type=minecraft:breeze_wind_charge] as @e[type=!minecraft:player,distance=..16] at @s run damage @a[distance=..2.5,gamemode=!spectator,limit=1,sort=nearest] 2.5 minecraft:mob_attack by @s
-execute at @e[type=minecraft:breeze_wind_charge] as @e[type=!minecraft:player,distance=..16] at @s run particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 normal
-execute as @e[type=minecraft:breeze_wind_charge] run kill @s
+execute at @e[type=minecraft:breeze_wind_charge,tag=!sbcore] as @e[type=!minecraft:player,distance=..16] at @s run damage @a[distance=..2.5,gamemode=!spectator,limit=1,sort=nearest] 2.5 minecraft:mob_attack by @s
+execute at @e[type=minecraft:breeze_wind_charge,tag=!sbcore] as @e[type=!minecraft:player,distance=..16] at @s run particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 normal
+execute as @e[type=minecraft:breeze_wind_charge,tag=!sbcore] run tag @s add sbcore
 
 #玩家等级粒子
-execute at @a[level=30..39] run particle minecraft:crit ~ ~0.2 ~ 0.2 0.2 0.2 0 1 normal
-execute at @a[level=40..59] run particle minecraft:effect ~ ~ ~ 0.2 0 0.2 0 1 normal
-execute at @a[level=60..69] run particle minecraft:enchant ~ ~1 ~ 0.2 0.4 0.2 0.5 1 normal
-execute at @a[level=70..79] run particle minecraft:enchant ~ ~1 ~ 0.25 0.4 0.25 0.75 1 normal
-execute at @a[level=80..89] run particle minecraft:enchant ~ ~1 ~ 0.3 0.4 0.3 1 1 normal
-execute at @a[level=90..99] run particle minecraft:enchant ~ ~1 ~ 0.35 0.4 0.35 1.25 1 normal
-execute at @a[level=100..149] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
-execute at @a[level=150..299] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.01 1 normal
-execute at @a[level=300..499] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.05 1 normal
-execute at @a[level=500..999] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.2 2 normal
-execute at @a[level=1000..] run particle minecraft:enchant ~ ~1 ~ 5 5 5 10 50 normal
-execute at @a[level=1000..] run xp add @a[distance=..5] 1 points
+execute at @a[level=30..39,gamemode=!spectator] run particle minecraft:crit ~ ~0.2 ~ 0.2 0.2 0.2 0 1 normal
+execute at @a[level=40..59,gamemode=!spectator] run particle minecraft:effect ~ ~ ~ 0.2 0 0.2 0 1 normal
+execute at @a[level=60..69,gamemode=!spectator] run particle minecraft:enchant ~ ~1 ~ 0.2 0.4 0.2 0.5 1 normal
+execute at @a[level=70..79,gamemode=!spectator] run particle minecraft:enchant ~ ~1 ~ 0.25 0.4 0.25 0.75 1 normal
+execute at @a[level=80..89,gamemode=!spectator] run particle minecraft:enchant ~ ~1 ~ 0.3 0.4 0.3 1 1 normal
+execute at @a[level=90..99,gamemode=!spectator] run particle minecraft:enchant ~ ~1 ~ 0.35 0.4 0.35 1.25 1 normal
+execute at @a[level=100..149,gamemode=!spectator] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
+execute at @a[level=150..299,gamemode=!spectator] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.01 1 normal
+execute at @a[level=300..499,gamemode=!spectator] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.05 1 normal
+execute at @a[level=500..999,gamemode=!spectator] run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.2 2 normal
+execute at @a[level=1000..,gamemode=!spectator] run particle minecraft:enchant ~ ~1 ~ 5 5 5 10 50 normal
+execute at @a[level=1000..,gamemode=!spectator] run xp add @a[distance=..5] 1 points
+
+#铜格栅
+execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:exposed_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:oxidized_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:weathered_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:waxed_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:waxed_exposed_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:waxed_oxidized_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:waxed_weathered_copper_grate run setblock ~ ~ ~ air destroy

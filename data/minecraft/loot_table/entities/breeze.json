@@ -16,15 +16,15 @@
                 "add": false,
                 "count": {
                   "type": "minecraft:uniform",
-                  "max": 8.0,
-                  "min": 1.0
+                  "max": 12.0,
+                  "min": 2.0
                 },
                 "function": "minecraft:set_count"
               },
               {
                 "count": {
                   "type": "minecraft:uniform",
-                  "max": 4.0,
+                  "max": 2.0,
                   "min": 1.0
                 },
                 "enchantment": "minecraft:looting",
@@ -43,9 +43,16 @@
                       {
                         "effect": {
                           "id": "minecraft:absorption",
-                          "duration": 600,
+                          "duration": 1200,
                           "amplifier": 4
                           }
+                      },
+                      {
+                        "effect": {
+                          "id": "wind_charged",
+                          "duration": 400,
+                          "amplifier": 0
+                        }
                       }
                     ]
                   }

@@ -93,14 +93,14 @@
                     {
                       "effect": {
                         "id": "minecraft:absorption",
-                        "duration": 600,
+                        "duration": 1200,
                         "amplifier": 4
                         }
                     },
                     {
                       "effect": {
                         "id": "wind_charged",
-                        "duration": 300,
+                        "duration": 400,
                         "amplifier": 0
                       }
                     }
