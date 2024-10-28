@@ -54,7 +54,7 @@
             }
           ],
           "name": "minecraft:tipped_arrow",
-          "weight": 3
+          "weight": 2
         },
         {
           "type": "minecraft:item",

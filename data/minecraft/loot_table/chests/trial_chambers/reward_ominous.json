@@ -15,7 +15,11 @@
           "weight": 2
         }
       ],
-      "rolls": 1.0
+      "rolls": {
+        "max": 6.0,
+        "min": 3.0,
+        "type": "uniform"
+      }
     },
     {
       "bonus_rolls": 0.0,
@@ -25,11 +29,7 @@
           "value": "minecraft:chests/trial_chambers/reward_ominous_common"
         }
       ],
-      "rolls": {
-        "type": "minecraft:uniform",
-        "max": 3.0,
-        "min": 1.0
-      }
+      "rolls": 2.0
     },
     {
       "bonus_rolls": 0.0,
@@ -45,7 +45,7 @@
           "value": "minecraft:chests/trial_chambers/reward_ominous_unique"
         }
       ],
-      "rolls": 1.0
+      "rolls": 3.0
     }
   ],
   "random_sequence": "minecraft:chests/trial_chambers/reward_ominous"

@@ -7,25 +7,78 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:enchanted_golden_apple",
-          "weight": 3
+          "weight": 6,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 2.0,
+                "min": 1.0
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:flow_armor_trim_smithing_template",
-          "weight": 3
+          "weight": 6
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:flow_banner_pattern",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_creator",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:music_disc_creator"
+          "name": "minecraft:heavy_core",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:heavy_core"
+          "name": "netherite_chestplate",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "trim": {
+                  "material": "minecraft:amethyst",
+                  "pattern": "minecraft:flow",
+                  "show_in_tooltip": true
+                },
+                "attribute_modifiers": {
+                  "show_in_tooltip": true,
+                  "modifiers": [
+                    {
+                      "id": "chest",
+                      "slot": "chest",
+                      "type": "generic.armor",
+                      "amount": 8,
+                      "operation": "add_value"
+                    },
+                    {
+                      "id": "chest",
+                      "slot": "chest",
+                      "type": "generic.armor_toughness",
+                      "amount": 3,
+                      "operation": "add_value"
+                    },
+                    {
+                      "id": "chest",
+                      "slot": "chest",
+                      "type": "generic.attack_damage",
+                      "amount": 1,
+                      "operation": "add_value"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
         }
       ],
       "rolls": 1.0

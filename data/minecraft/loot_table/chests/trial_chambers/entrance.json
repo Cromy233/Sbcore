@@ -40,8 +40,8 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:wooden_axe",
-          "weight": 10
+          "name": "minecraft:golden_axe",
+          "weight": 5
         },
         {
           "type": "minecraft:item",
@@ -78,7 +78,7 @@
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 5.0,
+        "max": 4.0,
         "min": 3.0
       }
     }

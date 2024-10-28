@@ -106,7 +106,7 @@
             }
           ],
           "name": "minecraft:honey_bottle",
-          "weight": 3
+          "weight": 2
         },
         {
           "type": "minecraft:item",
@@ -156,7 +156,8 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:diamond"
+          "name": "minecraft:diamond",
+          "weight": 2
         }
       ],
       "rolls": 1.0

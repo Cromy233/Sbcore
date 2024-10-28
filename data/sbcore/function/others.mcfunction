@@ -103,11 +103,16 @@ execute at @a[level=1000..,gamemode=!spectator] run particle minecraft:enchant ~
 execute at @a[level=1000..,gamemode=!spectator] run xp add @a[distance=..5] 1 points
 
 #铜格栅
-execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:copper_grate run setblock ~ ~ ~ air destroy
-execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:exposed_copper_grate run setblock ~ ~ ~ air destroy
-execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:oxidized_copper_grate run setblock ~ ~ ~ air destroy
-execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:weathered_copper_grate run setblock ~ ~ ~ air destroy
-execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:waxed_copper_grate run setblock ~ ~ ~ air destroy
-execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:waxed_exposed_copper_grate run setblock ~ ~ ~ air destroy
-execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:waxed_oxidized_copper_grate run setblock ~ ~ ~ air destroy
-execute at @a[gamemode=!spectator] positioned ~ ~-0.01 ~ if block ~ ~ ~ minecraft:waxed_weathered_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.0001 ~ if block ~ ~ ~ minecraft:copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.0001 ~ if block ~ ~ ~ minecraft:exposed_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.0001 ~ if block ~ ~ ~ minecraft:oxidized_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.0001 ~ if block ~ ~ ~ minecraft:weathered_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.0001 ~ if block ~ ~ ~ minecraft:waxed_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.0001 ~ if block ~ ~ ~ minecraft:waxed_exposed_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.0001 ~ if block ~ ~ ~ minecraft:waxed_oxidized_copper_grate run setblock ~ ~ ~ air destroy
+execute at @a[gamemode=!spectator] positioned ~ ~-0.0001 ~ if block ~ ~ ~ minecraft:waxed_weathered_copper_grate run setblock ~ ~ ~ air destroy
+#感觉这个positioned怪怪的，但是懒得改了（
+
+#末影龙
+#execute at @e[type=minecraft:ender_dragon,tag=!sbcore] run summon minecraft:ender_dragon
+#execute as @e[type=minecraft:ender_dragon,tag=!sbcore] run data merge entity @s {Tags:["sbcore"]}

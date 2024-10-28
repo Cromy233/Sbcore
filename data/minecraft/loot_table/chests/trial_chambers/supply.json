@@ -37,7 +37,8 @@
               "id": "minecraft:poison"
             }
           ],
-          "name": "minecraft:tipped_arrow"
+          "name": "minecraft:tipped_arrow",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -56,7 +57,8 @@
               "id": "minecraft:slowness"
             }
           ],
-          "name": "minecraft:tipped_arrow"
+          "name": "minecraft:tipped_arrow",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -100,7 +102,7 @@
             }
           ],
           "name": "minecraft:baked_potato",
-          "weight": 2
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -113,6 +115,25 @@
                 "min": 2.0
               },
               "function": "minecraft:set_count"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:food":
+                {
+                  "nutrition":2,
+                  "saturation":0.5,
+                  "effects": [
+                    {
+                      "effect": {
+                        "id":"minecraft:glowing",
+                        "duration":200,
+                        "amplifier":0
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ],
           "name": "minecraft:glow_berries",
@@ -131,7 +152,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:acacia_planks"
+          "name": "minecraft:jungle_log"
         },
         {
           "type": "minecraft:item",
@@ -161,7 +182,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:bone_meal"
+          "name": "minecraft:kelp"
         },
         {
           "type": "minecraft:item",
@@ -241,8 +262,8 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:stone_pickaxe",
-          "weight": 2
+          "name": "minecraft:iron_sword",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -253,7 +274,8 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:milk_bucket"
+          "name": "minecraft:milk_bucket",
+          "weight": 3
         }
       ],
       "rolls": {

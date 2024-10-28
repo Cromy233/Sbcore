@@ -33,6 +33,11 @@
                   "minecraft:unbreaking": 3,
                   "minecraft:thorns": 4
                 },
+                "trim": {
+                  "material": "minecraft:diamond",
+                  "pattern": "minecraft:tide",
+                  "show_in_tooltip": true
+                },
                 "attribute_modifiers": [
                   {
                     "id": "head",
@@ -121,6 +126,11 @@
                   "minecraft:mending": 1,
                   "minecraft:unbreaking": 3,
                   "protection": 4
+                },
+                "trim": {
+                  "material": "minecraft:gold",
+                  "pattern": "minecraft:tide",
+                  "show_in_tooltip": true
                 },
                 "attribute_modifiers": [
                   {
@@ -212,6 +222,11 @@
                   "minecraft:unbreaking": 3,
                   "minecraft:thorns": 4
                 },
+                "trim": {
+                  "material": "minecraft:diamond",
+                  "pattern": "minecraft:tide",
+                  "show_in_tooltip": true
+                },
                 "attribute_modifiers": [
                   {
                     "id": "legs",
@@ -300,6 +315,11 @@
                   "minecraft:mending": 1,
                   "minecraft:unbreaking": 3,
                   "protection": 4
+                },
+                "trim": {
+                  "material": "minecraft:gold",
+                  "pattern": "minecraft:tide",
+                  "show_in_tooltip": true
                 },
                 "attribute_modifiers": [
                   {
@@ -518,7 +538,7 @@
       ],
       "entries": [
         {
-          "type": "item",
+          "type": "minecraft:item",
           "name": "minecraft:experience_bottle",
           "functions": [
             {
