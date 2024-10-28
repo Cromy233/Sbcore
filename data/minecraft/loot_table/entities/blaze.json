@@ -97,21 +97,21 @@
                     "custom_name": "inferno",
                     "custom_effects": [
                       {
-                        "id": "minecraft:strength",
-                        "duration": 12000,
-                        "amplifier": 0,
-                        "show_particles": false
-                      },
-                      {
                         "id": "minecraft:regeneration",
                         "duration": 12000,
                         "amplifier": 0,
                         "show_particles": false
+                      },                                      
+                      {
+                        "id": "minecraft:resistance",
+                        "duration": 12000,
+                        "amplifier": 0                          
                       },
                       {
-                        "id": "minecraft:instant_damage",
-                        "duration": 1,
-                        "amplifier": 2                       
+                        "id": "minecraft:strength",
+                        "duration": 12000,
+                        "amplifier": 0,
+                        "show_particles": false
                       },
                       {
                         "id": "minecraft:slowness",
@@ -119,15 +119,15 @@
                         "amplifier": 0                          
                       },
                       {
-                        "id": "minecraft:resistance",
-                        "duration": 12000,
-                        "amplifier": 0                          
-                      },
-                      {
                         "id": "minecraft:bad_omen",
                         "duration": 12000,
                         "amplifier": 4                          
-                      }                      
+                      },
+                      {
+                        "id": "minecraft:instant_damage",
+                        "duration": 1,
+                        "amplifier": 2                       
+                      }                
                     ]
                   }
                 },

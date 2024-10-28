@@ -9,28 +9,15 @@
           "functions": [
             {
               "add": false,
-              "count": 5.0,
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:cooked_chicken",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
               "count": {
-                "type": "minecraft:uniform",
-                "max": 12.0,
+                "max": 7.0,
                 "min": 3.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:bread",
-          "weight": 3
+          "name": "minecraft:cooked_chicken",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
@@ -39,8 +26,46 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 6.0,
+                "max": 5.0,
                 "min": 3.0
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "max_stack_size": 16,
+                "food": {
+                  "nutrition": 4,
+                  "saturation": 7,
+                  "using_converts_to": {
+                    "id": "minecraft:bowl"
+                  },
+                  "effects": [
+                    {
+                      "effect": {
+                        "id": "minecraft:instant_health",
+                        "duration": 1,
+                        "amplifier": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "name": "minecraft:beetroot_soup",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
               },
               "function": "minecraft:set_count"
             },
@@ -104,7 +129,24 @@
               "id": "minecraft:swiftness"
             }
           ],
-          "name": "minecraft:potion"
+          "name": "minecraft:potion",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:set_potion",
+              "id": "strength"
+            }
+          ],
+          "name": "minecraft:potion",
+          "weight": 1
         }
       ],
       "rolls": 1.0

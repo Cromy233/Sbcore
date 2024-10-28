@@ -3,11 +3,6 @@
     "pools": [
       {
         "bonus_rolls": 0.0,
-        "conditions": [
-          {
-            "condition": "minecraft:killed_by_player"
-          }
-        ],
         "entries": [
           {
             "type": "minecraft:item",
@@ -17,7 +12,7 @@
                 "count": {
                   "type": "minecraft:uniform",
                   "max": 12.0,
-                  "min": 2.0
+                  "min": 6.0
                 },
                 "function": "minecraft:set_count"
               },
@@ -33,7 +28,7 @@
               {
                 "function": "set_components",
                 "components": {
-                  "rarity": "uncommon",
+                  "minecraft:rarity": "uncommon",
                   "minecraft:item_name": "{\"text\":\"至高马铃薯\"}",
                   "minecraft:food": {
                     "nutrition": 5,
@@ -60,6 +55,71 @@
               }
             ],
             "name": "minecraft:baked_potato"
+          }
+        ],
+        "rolls": 1.0
+      },
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:killed_by_player"
+          },
+          {
+            "condition": "minecraft:random_chance_with_enchanted_bonus",
+            "enchanted_chance": {
+              "type": "minecraft:linear",
+              "base": 0.12,
+              "per_level_above_first": 0.02
+            },
+            "enchantment": "minecraft:sharpness",
+            "unenchanted_chance": 0.1
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:set_components",
+            "components": {
+              "minecraft:rarity": "epic",
+              "minecraft:item_name":"{\"text\":\"惧风\"}",
+              "minecraft:potion_contents": {
+                "custom_color": 16777215,
+                "custom_name": "typhoon",
+                "custom_effects": [
+                  {
+                    "id": "minecraft:jump_boost",
+                    "amplifier": 4,
+                    "duration": 600
+                  },
+                  {
+                    "id": "minecraft:speed",
+                    "amplifier": 2,
+                    "duration": 600
+                  },
+                  {
+                    "id": "minecraft:slow_falling",
+                    "amplifier": 0,
+                    "duration": 600
+                  },
+                  {
+                    "id": "minecraft:weakness",
+                    "amplifier": 2,
+                    "duration": 600
+                  },
+                  {
+                    "id": "minecraft:wind_charged",
+                    "amplifier": 0,
+                    "duration": 600
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:lingering_potion"
           }
         ],
         "rolls": 1.0
