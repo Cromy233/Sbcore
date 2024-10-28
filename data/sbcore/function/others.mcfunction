@@ -52,6 +52,7 @@ execute as @e[type=minecraft:snowball,tag=!sbcore] at @s unless block ~ ~-1 ~ ai
 
 #鸡蛋
 execute at @e[type=minecraft:egg] as @e[type=minecraft:arrow,distance=..32,nbt={inGround:0b}] run data merge entity @s {NoGravity:0b}
+execute at @e[type=minecraft:egg] as @e[type=minecraft:fireball,tag=sbcore,distance=..32,nbt={Motion:[0.0d,0.0d,0.0d]}] run data merge entity @s {Motion:[0.0d,-1d,0.0d]}
 execute at @e[type=minecraft:egg] at @e[type=minecraft:magma_cube,distance=..32,nbt={NoGravity:1b}] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
 execute at @e[type=minecraft:egg] as @e[type=minecraft:magma_cube,distance=..32,nbt={NoGravity:1b}] run data merge entity @s {NoGravity:0b}
 execute at @e[type=minecraft:egg] run playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 10 1
@@ -85,6 +86,7 @@ execute as @e[type=minecraft:shulker_bullet,tag=!sbcore] run tag @s add sbcore
 
 #大风弹
 execute at @e[type=minecraft:breeze_wind_charge,tag=!sbcore] as @e[type=!minecraft:player,distance=..16] at @s run damage @a[distance=..2.5,gamemode=!spectator,limit=1,sort=nearest] 2.5 minecraft:mob_attack by @s
+execute at @e[type=minecraft:breeze_wind_charge,tag=!sbcore] as @e[type=!minecraft:player,distance=..16] at @s run damage @e[distance=..2.5,type=minecraft:iron_golem,limit=1,sort=nearest] 2.5 minecraft:mob_attack by @s
 execute at @e[type=minecraft:breeze_wind_charge,tag=!sbcore] as @e[type=!minecraft:player,distance=..16] at @s run particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 normal
 execute as @e[type=minecraft:breeze_wind_charge,tag=!sbcore] run tag @s add sbcore
 

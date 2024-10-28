@@ -166,8 +166,8 @@ execute as @e[type=minecraft:vex,tag=!sbcore] run kill @s
 execute at @e[type=minecraft:evoker,tag=!sbcore] run xp add @a[distance=..2.5,gamemode=!spectator] -1 points
 
 #旋风人
-execute as @e[type=minecraft:breeze,tag=!sbcore] at @s if entity @e[distance=0.01..5,type=!minecraft:player] run ride @e[distance=0.01..5,type=!minecraft:player,limit=1,sort=nearest] mount @s
-execute as @e[type=minecraft:breeze,tag=!sbcore] at @s if entity @e[distance=0.01..5,type=!minecraft:player] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.gravity",base:0.2}]}
+execute as @e[type=minecraft:breeze,tag=!sbcore] at @s if entity @e[distance=0.01..5,type=!minecraft:player,type=!minecraft:breeze_wind_charge,type=!minecraft:item,type=!minecraft:wind_charge,type=!minecraft:painting,type=!minecraft:wind_charge,type=!minecraft:item_frame,type=!minecraft:glow_item_frame,type=!minecraft:fireball] run ride @e[distance=0.01..5,type=!minecraft:player,limit=1,sort=nearest] mount @s
+execute as @e[type=minecraft:breeze,tag=!sbcore] at @s if entity @e[distance=0.01..5,type=!minecraft:player,type=!minecraft:breeze_wind_charge,type=!minecraft:item,type=!minecraft:wind_charge,type=!minecraft:painting,type=!minecraft:wind_charge,type=!minecraft:item_frame,type=!minecraft:glow_item_frame,type=!minecraft:fireball] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.gravity",base:0.2}]}
 
 #疣猪兽
 execute as @e[type=minecraft:hoglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.attack_knockback",base:3},{id:"generic.attack_damage",base:5}]}

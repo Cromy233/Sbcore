@@ -114,14 +114,14 @@
                         "show_particles": false
                       },
                       {
-                        "id": "minecraft:slowness",
-                        "duration": 12000,
-                        "amplifier": 0                          
-                      },
-                      {
                         "id": "minecraft:bad_omen",
                         "duration": 12000,
                         "amplifier": 4                          
+                      },
+                      {
+                        "id": "minecraft:slowness",
+                        "duration": 12000,
+                        "amplifier": 0                          
                       },
                       {
                         "id": "minecraft:instant_damage",
