@@ -1,5 +1,5 @@
 # Just Sbcore!
-你说得对，但是JustSbcore是一个仅使用了一个标签(sbcore🤓👆)的难绷Minecraft Datapack，旨在为玩家提供全(ni)新(tian)的Minecraft游戏体验。~~对了，我是execute小子~~
+你说得对，但是JustSbcore是一个仅使用了一个标签(sbcore🤓👆)的难绷1.21.0Minecraft Datapack，旨在为玩家提供全(ni)新(tian)的Minecraft游戏体验。~~对了，我是execute小子~~
 
 ### 新增内容：
 1. 不告诉你awa
