@@ -100,4 +100,4 @@ execute at @e[type=minecraft:strider,tag=!sbcore] at @e[distance=..5,type=!minec
 execute at @e[type=minecraft:strider,tag=!sbcore] at @a[distance=..5,gamemode=!spectator] run particle minecraft:splash ~ ~1 ~ 0.25 0.5 0.25 0 2 normal
 
 #僵尸猪人
-execute as @e[type=minecraft:zombified_piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Grumm"',active_effects:[{id:"minecraft:levitation",duration:1000000000,amplifier:0,show_particles:0b}]}
+execute as @e[type=minecraft:zombified_piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Grumm"',attributes:[{id:"generic.gravity",base:-0.08}]}

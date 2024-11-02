@@ -24,9 +24,6 @@ execute as @e[type=minecraft:zombie,tag=!sbcore,nbt={IsBaby:0b}] run data merge 
 #小僵尸
 execute as @e[type=minecraft:zombie,nbt={IsBaby:1b},tag=!sbcore] run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin"}],IsBaby:0b,Tags:["sbcore"],HandItems:[{id:"minecraft:mace"},{}],HandDropChances:[0f,1f],attributes:[{id:"generic.jump_strength",base:1},{id:"generic.fall_damage_multiplier",base:0},{id:"generic.movement_speed",base:0.35}]}
 
-#猪灵
-execute as @e[type=minecraft:piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Dinnerbone"',attributes:[{id:"generic.gravity",base:-0.08}]}
-
 #卫道士
 execute as @e[type=minecraft:vindicator,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],HandDropChances:[0f,1f],HandItems:[{id:"minecraft:slime_ball",components:{enchantments:{"minecraft:knockback":15},}},{}],attributes:[{id:"generic.attack_damage",base:2},{id:"generic.follow_range",base:64}]}
 
@@ -175,9 +172,13 @@ execute at @e[type=minecraft:hoglin,tag=sbcore] run effect give @e[type=!minecra
 execute at @e[type=minecraft:hoglin,tag=sbcore] run effect give @a[distance=..2.5,gamemode=!spectator] slow_falling 5 0 true
 
 #岩浆怪
+execute as @e[type=minecraft:magma_cube] run attribute @s minecraft:generic.scale modifier remove magma
+execute as @e[type=minecraft:magma_cube] run attribute @s minecraft:generic.attack_damage modifier remove magma
+
 execute as @e[type=minecraft:magma_cube,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],NoGravity:1b}
 execute at @e[type=minecraft:magma_cube,tag=sbcore] run fill ~ ~ ~ ~ ~ ~ fire replace air
-execute at @e[type=minecraft:magma_cube,tag=sbcore] as @e[type=minecraft:arrow,distance=..2.5] run data merge entity @s {Fire:20s}
+execute as @e[type=minecraft:magma_cube,tag=sbcore,nbt={NoGravity:1b}] run attribute @s minecraft:generic.scale modifier add magma -0.5 add_multiplied_total
+execute as @e[type=minecraft:magma_cube,tag=sbcore,nbt={OnGround:1b}] run attribute @s minecraft:generic.attack_damage modifier add magma -0.5 add_multiplied_total
 
 #监守者
 execute as @e[type=minecraft:warden,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.max_health",base:150},{id:"generic.scale",base:0.9},{id:"generic.water_movement_efficiency",base:1}]}
@@ -239,3 +240,8 @@ execute at @e[type=minecraft:elder_guardian,tag=sbcore] as @e[type=minecraft:ite
 
 execute as @e[type=minecraft:shulker,tag=!sbcore] at @s if entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.scale",base:1}]}
 execute as @e[type=minecraft:shulker,tag=sbcore] at @s unless entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {Tags:[""],attributes:[{id:"generic.scale",base:0}]}
+
+#猪灵
+execute as @e[type=minecraft:piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Grumm"',attributes:[{id:"generic.gravity",base:-0.08},{id:"generic.fall_damage_multiplier",base:2}]}
+execute as @e[type=minecraft:piglin,tag=sbcore,nbt={OnGround:1b}] run tag @s remove sbcore
+effect give @e[type=minecraft:piglin,tag=sbcore,nbt={OnGround:0b}] minecraft:resistance 1 2 true

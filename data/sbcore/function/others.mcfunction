@@ -51,12 +51,15 @@ execute as @e[type=minecraft:snowball,tag=!sbcore] at @s unless block ~ ~-1 ~ ai
 #execute as @e[type=minecraft:snowball] run kill @s
 
 #鸡蛋
+execute at @e[type=minecraft:egg] at @e[type=minecraft:arrow,distance=..32,nbt={inGround:0b}] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
 execute at @e[type=minecraft:egg] as @e[type=minecraft:arrow,distance=..32,nbt={inGround:0b}] run data merge entity @s {NoGravity:0b}
+execute at @e[type=minecraft:egg] at @e[type=minecraft:fireball,tag=sbcore,distance=..32,nbt={Motion:[0.0d,0.0d,0.0d]}] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
 execute at @e[type=minecraft:egg] as @e[type=minecraft:fireball,tag=sbcore,distance=..32,nbt={Motion:[0.0d,0.0d,0.0d]}] run data merge entity @s {Motion:[0.0d,-1d,0.0d]}
 execute at @e[type=minecraft:egg] at @e[type=minecraft:magma_cube,distance=..32,nbt={NoGravity:1b}] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
 execute at @e[type=minecraft:egg] as @e[type=minecraft:magma_cube,distance=..32,nbt={NoGravity:1b}] run data merge entity @s {NoGravity:0b}
+execute at @e[type=minecraft:egg] at @e[type=minecraft:piglin,distance=..32,tag=sbcore] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
+execute at @e[type=minecraft:egg] as @e[type=minecraft:piglin,distance=..32,tag=sbcore] run data merge entity @s {attributes:[{id:"generic.gravity",base:0.08}]}
 execute at @e[type=minecraft:egg] run playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 10 1
-execute at @e[type=minecraft:egg] at @e[type=minecraft:arrow,distance=..32,nbt={inGround:0b}] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
 execute as @e[type=minecraft:egg] run kill @s
 
 #唤魔者尖牙
