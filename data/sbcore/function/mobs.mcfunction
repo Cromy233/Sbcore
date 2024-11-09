@@ -225,7 +225,7 @@ execute at @e[type=minecraft:stray] if block ~ ~-1 ~ minecraft:water run fill ~ 
 execute as @a run attribute @s minecraft:generic.gravity modifier remove guardian_curse
 
 execute as @e[type=minecraft:elder_guardian,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],Health:100,attributes:[{id:"generic.max_health",base:100},{id:"generic.armor",base:10}]}
-execute at @e[type=minecraft:elder_guardian,tag=sbcore] run tp @e[type=minecraft:guardian,distance=16..32,limit=3,sort=nearest] ~ ~ ~
+execute at @e[type=minecraft:elder_guardian,tag=sbcore] unless entity @e[type=minecraft:guardian,distance=..16] run tp @e[type=minecraft:guardian,distance=16..32,limit=3,sort=nearest] ~ ~ ~
 execute at @e[type=minecraft:elder_guardian,tag=sbcore] run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 water[level=5] replace air
 execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..4,gamemode=!spectator] run tp @s ~ ~ ~ ~90 ~
 execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..4,gamemode=!spectator] run effect give @s minecraft:resistance 1 2 true
