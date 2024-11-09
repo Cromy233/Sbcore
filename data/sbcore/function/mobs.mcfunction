@@ -204,10 +204,11 @@ execute as @e[type=minecraft:husk,tag=!sbcore] at @s if entity @a[distance=..1.5
 
 #守卫者
 execute as @e[type=minecraft:guardian,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],Health:20}
-execute as @e[type=minecraft:guardian,tag=sbcore] at @s as @e[distance=..1.5,type=!minecraft:guardian,type=!minecraft:player,type=!minecraft:elder_guardian] at @s run tp @s ~ ~ ~ ~180 ~
-execute as @e[type=minecraft:guardian,tag=sbcore] at @s as @a[distance=..1.5,gamemode=!spectator] at @s run tp @s ~ ~ ~ ~180 ~
-execute as @e[type=minecraft:guardian,tag=sbcore] at @s run effect give @a[distance=..1.5,gamemode=!spectator] blindness 2 0 true
-execute as @e[type=minecraft:guardian,tag=sbcore] at @s at @a[distance=..1.5,gamemode=!spectator] run particle sonic_boom ^ ^1 ^0.5 0 0 0 1 1 normal
+execute as @e[type=minecraft:guardian,tag=sbcore] at @s as @e[distance=..1,type=!minecraft:guardian,type=!minecraft:player,type=!minecraft:elder_guardian] at @s run tp @s ~ ~ ~ ~180 ~
+execute as @e[type=minecraft:guardian,tag=sbcore] at @s as @a[distance=..1,gamemode=!spectator] at @s run tp @s ~ ~ ~ ~180 ~
+execute as @e[type=minecraft:guardian,tag=sbcore] at @s run effect give @a[distance=..1,gamemode=!spectator] minecraft:blindness 2 0 true
+execute as @e[type=minecraft:guardian,tag=sbcore] at @s at @a[distance=..1,gamemode=!spectator] run particle minecraft:sonic_boom ^ ^1 ^0.5 0 0 0 1 1 normal
+execute as @e[type=minecraft:guardian,tag=sbcore] at @s if entity @a[distance=..1,gamemode=!spectator] run damage @s 7 minecraft:mob_attack by @s
 
 #流獨
 execute as @e[type=minecraft:stray,tag=!sbcore] at @s if entity @a[distance=..3,gamemode=!spectator] run item replace entity @s armor.head from entity @p armor.head
@@ -224,15 +225,20 @@ execute at @e[type=minecraft:stray] if block ~ ~-1 ~ minecraft:water run fill ~ 
 #远古守卫者
 execute as @a run attribute @s minecraft:generic.gravity modifier remove guardian_curse
 
-execute as @e[type=minecraft:elder_guardian,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],Health:100,attributes:[{id:"generic.max_health",base:100},{id:"generic.armor",base:10}]}
+execute as @e[type=minecraft:elder_guardian,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],Health:150,attributes:[{id:"generic.max_health",base:150},{id:"generic.armor",base:10}]}
 execute at @e[type=minecraft:elder_guardian,tag=sbcore] unless entity @e[type=minecraft:guardian,distance=..16] run tp @e[type=minecraft:guardian,distance=16..32,limit=3,sort=nearest] ~ ~ ~
+execute at @e[type=minecraft:elder_guardian,tag=sbcore] unless entity @e[type=minecraft:guardian,distance=..8] run tp @e[type=minecraft:guardian,distance=..16,limit=3,sort=furthest] ~ ~ ~
 execute at @e[type=minecraft:elder_guardian,tag=sbcore] run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 water[level=5] replace air
-execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..4,gamemode=!spectator] run tp @s ~ ~ ~ ~90 ~
-execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..4,gamemode=!spectator] run effect give @s minecraft:resistance 1 2 true
-execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..4,gamemode=!spectator] as @e[distance=..2.5,type=!minecraft:elder_guardian] run damage @s 6.0 minecraft:mob_attack by @e[type=minecraft:elder_guardian,tag=sbcore,limit=1,sort=nearest]
-effect give @e[type=minecraft:elder_guardian,tag=sbcore] regeneration infinite 0 true
-execute at @e[type=minecraft:elder_guardian,tag=sbcore] run effect give @e[type=minecraft:guardian,tag=sbcore,distance=..16] regeneration infinite 0 true
+execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..3.5,gamemode=!spectator] run tp @s ~ ~ ~ ~90 ~
+execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..3.5,gamemode=!spectator] run effect give @s minecraft:resistance 1 2 true
+execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..3.5,gamemode=!spectator] as @e[distance=..3,type=!minecraft:elder_guardian] run damage @s 7.0 minecraft:mob_attack by @e[type=minecraft:elder_guardian,tag=sbcore,limit=1,sort=nearest]
+effect give @e[type=minecraft:elder_guardian,tag=sbcore] minecraft:regeneration infinite 0 true
+effect give @e[type=minecraft:elder_guardian,tag=sbcore] minecraft:resistance infinite 0 true
 execute at @e[type=minecraft:elder_guardian,tag=sbcore] as @a[distance=..32,gamemode=!spectator] at @s if block ~ ~ ~ water run attribute @s minecraft:generic.gravity modifier add guardian_curse -0.16 add_value
+execute at @e[type=minecraft:elder_guardian,tag=sbcore] if entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:prismarine_shard"}},distance=..16] run effect give @e[type=minecraft:guardian,distance=..16] minecraft:instant_health 1 0 true
+execute at @e[type=minecraft:elder_guardian,tag=sbcore] if entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:prismarine_shard"}},distance=..16] run effect give @e[type=minecraft:guardian,distance=..16] minecraft:resistance 15 1 false
+execute at @e[type=minecraft:elder_guardian,tag=sbcore] if entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:prismarine_shard"}},distance=..16] run effect give @e[type=minecraft:guardian,distance=16..32] minecraft:regeneration 15 0 false
+execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:prismarine_shard"}},distance=..16] run damage @s 10.0 minecraft:player_attack by @p
 execute at @e[type=minecraft:elder_guardian,tag=sbcore] as @e[type=minecraft:item,nbt={Item:{id:"minecraft:prismarine_shard"}},distance=..16] at @s run summon minecraft:lightning_bolt ~ ~ ~ {Tags:["sbcore"]}
 
 #潜影贝
