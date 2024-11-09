@@ -9,7 +9,6 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:wheat_seeds"}}] run data merge 
 execute as @e[type=item,nbt={Item:{id:"minecraft:potato"}}] run data merge entity @s {Item:{id:"minecraft:cookie",components:{"minecraft:food":{nutrition:2,saturation:1,effects:[{effect:{id:"minecraft:regeneration",duration:200,amplifier:0}}]}}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:cookie"}}] run data merge entity @s {Item:{id:"minecraft:cookie",components:{"minecraft:food":{nutrition:2,saturation:1,effects:[{effect:{id:"minecraft:regeneration",duration:200,amplifier:0}}]}}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:glass_bottle"}}] run data merge entity @s {Item:{id:"minecraft:experience_bottle"}}
-execute as @e[type=item,nbt={Item:{id:"minecraft:slime_ball"}}] run data merge entity @s {Item:{components:{"minecraft:enchantments":{"minecraft:knockback":3}}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:chorus_fruit"}}] run data merge entity @s {Item:{components:{"minecraft:food":{eat_seconds:0.8,can_always_eat:1b,nutrition:2,saturation:0,effects:[{effect:{id:"minecraft:invisibility",duration:100,amplifier:9}}]}}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:cactus"}}] run data merge entity @s {Item:{components:{"minecraft:food":{nutrition:3,saturation:7,effects:[{effect:{id:"minecraft:instant_damage",duration:1,amplifier:0}},{effect:{id:"minecraft:blindness",duration:20,amplifier:0}}]}}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:spider_eye"}}] run data merge entity @s {Item:{components:{"minecraft:food":{eat_seconds:0.8,can_always_eat:1b,nutrition:2,saturation:3.5,effects:[{effect:{id:"minecraft:night_vision",duration:200,amplifier:0}},{effect:{id:"minecraft:poison",duration:100,amplifier:0}}]}}}}
@@ -24,7 +23,6 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:glow_berries"}}] run data merge
 execute as @e[type=item,nbt={Item:{id:"minecraft:dried_kelp"}}] run data merge entity @s {Item:{id:"minecraft:dried_kelp",components:{"minecraft:food":{nutrition:1,saturation:1,eat_seconds:0.4,effects:[{effect:{id:"minecraft:dolphins_grace",duration:100,amplifier:0}}]}}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:melon_slice"}}] run data merge entity @s {Item:{id:"minecraft:melon_slice",components:{"minecraft:food":{nutrition:2,saturation:1.5,eat_seconds:0.8,effects:[{effect:{id:"minecraft:haste",duration:200,amplifier:0}}]}}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:glistering_melon_slice"}}] run data merge entity @s {Item:{id:"minecraft:glistering_melon_slice",components:{"minecraft:food":{nutrition:2,saturation:2,effects:[{effect:{id:"minecraft:haste",duration:600,amplifier:0}}]}}}}
-execute as @e[type=item,nbt={Item:{id:"minecraft:blaze_rod"}}] run data merge entity @s {Item:{id:"minecraft:blaze_rod",components:{enchantments:{"minecraft:fire_aspect":1}}}}
 
 #盲盒
 execute at @e[type=item,nbt={Item:{id:"minecraft:blaze_spawn_egg"}}] run summon minecraft:blaze ~ ~ ~

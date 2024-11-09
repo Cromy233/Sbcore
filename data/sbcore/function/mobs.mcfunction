@@ -114,6 +114,7 @@ execute at @e[type=minecraft:witch,tag=!sbcore] at @e[type=minecraft:iron_golem,
 
 #凋零骷髅
 execute as @e[type=minecraft:wither_skeleton,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],HandItems:[{id:"minecraft:netherite_sword"},{id:"minecraft:shield"}],HandDropChances:[0f,0f],ArmorItems:[{id:"minecraft:netherite_boots"},{id:"minecraft:netherite_leggings"},{id:"minecraft:netherite_chestplate"},{id:"minecraft:netherite_helmet"}],ArmorDropChances:[0f,0f,0f,0f],attributes:[{id:"generic.knockback_resistance",base:1},{id:"generic.movement_speed",base:0.15},{id:"generic.armor",base:30},{id:"generic.armor_toughness",base:20}]}
+
 execute at @e[type=minecraft:wither_skeleton,tag=sbcore] at @e[type=minecraft:ender_pearl,distance=..3] run particle minecraft:sweep_attack ~ ~ ~ 0 0 0 1 1 force
 execute at @e[type=minecraft:wither_skeleton,tag=sbcore] at @e[type=minecraft:trident,distance=..3,nbt={inGround:0b}] run particle minecraft:sweep_attack ~ ~ ~ 0 0 0 1 1 force
 execute at @e[type=minecraft:wither_skeleton,tag=sbcore] at @e[type=minecraft:arrow,distance=..3] run particle minecraft:sweep_attack ~ ~ ~ 0 0 0 1 1 force
@@ -165,20 +166,24 @@ execute at @e[type=minecraft:evoker,tag=!sbcore] run xp add @a[distance=..2.5,ga
 #旋风人
 execute as @e[type=minecraft:breeze,tag=!sbcore] at @s if entity @e[distance=0.01..5,type=!minecraft:player,type=!minecraft:breeze_wind_charge,type=!minecraft:item,type=!minecraft:wind_charge,type=!minecraft:painting,type=!minecraft:wind_charge,type=!minecraft:item_frame,type=!minecraft:glow_item_frame,type=!minecraft:fireball] run ride @e[distance=0.01..5,type=!minecraft:player,limit=1,sort=nearest] mount @s
 execute as @e[type=minecraft:breeze,tag=!sbcore] at @s if entity @e[distance=0.01..5,type=!minecraft:player,type=!minecraft:breeze_wind_charge,type=!minecraft:item,type=!minecraft:wind_charge,type=!minecraft:painting,type=!minecraft:wind_charge,type=!minecraft:item_frame,type=!minecraft:glow_item_frame,type=!minecraft:fireball] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.gravity",base:0.2}]}
+execute at @e[type=minecraft:breeze] run effect give @e[type=!minecraft:breeze,distance=..2.5] minecraft:slow_falling 1 0 true
 
 #疣猪兽
+execute as @a run attribute @s minecraft:generic.fall_damage_multiplier modifier remove hoglin_feather_falling
+
 execute as @e[type=minecraft:hoglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.attack_knockback",base:3},{id:"generic.attack_damage",base:5}]}
-execute at @e[type=minecraft:hoglin,tag=sbcore] run effect give @e[type=!minecraft:hoglin,distance=..2.5,type=!minecraft:player] slow_falling 5 0 true
-execute at @e[type=minecraft:hoglin,tag=sbcore] run effect give @a[distance=..2.5,gamemode=!spectator] slow_falling 5 0 true
+execute at @e[type=minecraft:hoglin,tag=sbcore] as @a[distance=..5,gamemode=!spectator] run attribute @s minecraft:generic.fall_damage_multiplier modifier add hoglin_feather_falling -0.9 add_multiplied_base
 
 #岩浆怪
 execute as @e[type=minecraft:magma_cube] run attribute @s minecraft:generic.scale modifier remove magma
 execute as @e[type=minecraft:magma_cube] run attribute @s minecraft:generic.attack_damage modifier remove magma
 
 execute as @e[type=minecraft:magma_cube,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],NoGravity:1b}
-execute at @e[type=minecraft:magma_cube,tag=sbcore] run fill ~ ~ ~ ~ ~ ~ fire replace air
+execute at @e[type=minecraft:magma_cube,tag=sbcore,nbt={OnGround:1b}] run fill ~ ~ ~ ~ ~ ~ fire replace air
 execute as @e[type=minecraft:magma_cube,tag=sbcore,nbt={NoGravity:1b}] run attribute @s minecraft:generic.scale modifier add magma -0.5 add_multiplied_total
 execute as @e[type=minecraft:magma_cube,tag=sbcore,nbt={OnGround:1b}] run attribute @s minecraft:generic.attack_damage modifier add magma -0.5 add_multiplied_total
+
+execute at @e[type=minecraft:magma_cube,tag=sbcore,nbt={NoGravity:1b}] run particle minecraft:flame ~ ~ ~ 1 -1 1 0.01 1 force
 
 #监守者
 execute as @e[type=minecraft:warden,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.max_health",base:150},{id:"generic.scale",base:0.9},{id:"generic.water_movement_efficiency",base:1}]}
@@ -227,7 +232,7 @@ execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[dista
 execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..4,gamemode=!spectator] as @e[distance=..2.5,type=!minecraft:elder_guardian] run damage @s 6.0 minecraft:mob_attack by @e[type=minecraft:elder_guardian,tag=sbcore,limit=1,sort=nearest]
 effect give @e[type=minecraft:elder_guardian,tag=sbcore] regeneration infinite 0 true
 execute at @e[type=minecraft:elder_guardian,tag=sbcore] run effect give @e[type=minecraft:guardian,tag=sbcore,distance=..16] regeneration infinite 0 true
-execute at @e[type=minecraft:elder_guardian,tag=sbcore] as @a[distance=..32] at @s if block ~ ~ ~ water run attribute @s minecraft:generic.gravity modifier add guardian_curse -0.16 add_value
+execute at @e[type=minecraft:elder_guardian,tag=sbcore] as @a[distance=..32,gamemode=!spectator] at @s if block ~ ~ ~ water run attribute @s minecraft:generic.gravity modifier add guardian_curse -0.16 add_value
 execute at @e[type=minecraft:elder_guardian,tag=sbcore] as @e[type=minecraft:item,nbt={Item:{id:"minecraft:prismarine_shard"}},distance=..16] at @s run summon minecraft:lightning_bolt ~ ~ ~ {Tags:["sbcore"]}
 
 #潜影贝

@@ -59,6 +59,12 @@
                 },
                 "enchantment": "minecraft:looting",
                 "function": "minecraft:enchanted_count_increase"
+              },
+              {
+                "function": "set_enchantments",
+                "enchantments": {
+                  "minecraft:fire_aspect": 1 
+                }
               }
             ],
             "name": "minecraft:blaze_rod"

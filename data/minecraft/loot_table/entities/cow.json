@@ -60,6 +60,35 @@
           }
         ],
         "rolls": 1.0
+      },
+      {
+        "bonus_rolls": 0.0,
+        "conditions": [
+          {
+            "condition": "minecraft:random_chance_with_enchanted_bonus",
+            "enchanted_chance": {
+              "type": "minecraft:linear",
+              "base": 0.016,
+              "per_level_above_first": 0.002
+            },
+            "enchantment": "minecraft:fortune",
+            "unenchanted_chance": 0.015
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:enchant_with_levels",
+            "levels": 1.0,
+            "options": "#in_enchanting_table"
+          }
+        ],
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:book"
+          }
+        ],
+        "rolls": 1.0
       }
     ],
     "random_sequence": "minecraft:entities/cow"

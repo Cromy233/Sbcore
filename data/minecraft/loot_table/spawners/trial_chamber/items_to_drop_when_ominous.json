@@ -124,7 +124,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:arrow"
+          "name": "minecraft:egg"
         },
         {
           "type": "minecraft:item",

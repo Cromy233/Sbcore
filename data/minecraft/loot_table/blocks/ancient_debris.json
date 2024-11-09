@@ -1,0 +1,104 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchanted_chance": 1.0,
+          "enchantment": "minecraft:silk_touch",
+          "unenchanted_chance": 0.90
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ancient_debris"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "max": 4.0,
+                "min": 1.0
+              }
+            }
+          ],
+          "type": "minecraft:item",
+          "name": "minecraft:charcoal",
+          "weight": 6
+        },
+        {
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "max": 2.0,
+                "min": 1.0
+              }
+            }
+          ],
+          "type": "minecraft:item",
+          "name": "minecraft:raw_iron",
+          "weight": 10
+        },
+        {
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "max": 2.0,
+                "min": 1.0
+              }
+            }
+          ],
+          "type": "minecraft:item",
+          "name": "minecraft:raw_copper",
+          "weight": 10
+        },
+        {
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "max": 2.0,
+                "min": 1.0
+              }
+            }
+          ],
+          "type": "minecraft:item",
+          "name": "minecraft:raw_gold",
+          "weight": 8
+        },
+        {
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1.0
+            }
+          ],
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 36
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "minecraft:blocks/ancient_debris"
+}

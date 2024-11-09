@@ -28,7 +28,7 @@ execute as @e[type=minecraft:small_fireball] run kill @s
 
 #大火球
 execute at @e[type=minecraft:fireball,tag=!sbcore] run summon minecraft:fireball ~ ~ ~ {Tags:["sbcore"],Passengers:[{id:"minecraft:fireball",Tags:["sbcore"],Passengers:[{id:"minecraft:fireball",Tags:["sbcore"]}]}]}
-execute at @e[type=minecraft:fireball,tag=!sbcore] as @e[type=minecraft:fireball,tag=sbcore,sort=nearest,limit=1,tag=sbcore] run data modify entity @s Motion set from entity @e[type=minecraft:fireball,sort=nearest,limit=1,tag=!sbcore] Motion
+execute at @e[type=minecraft:fireball,tag=!sbcore] as @e[type=minecraft:fireball,sort=nearest,limit=1,tag=sbcore] run data modify entity @s Motion set from entity @e[type=minecraft:fireball,sort=nearest,limit=1,tag=!sbcore] Motion
 execute as @e[type=minecraft:fireball,tag=!sbcore] run kill @s
 
 #闪电

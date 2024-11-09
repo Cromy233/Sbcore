@@ -19,8 +19,9 @@ execute as @e[type=minecraft:iron_golem,tag=!sbcore] run data merge entity @s {T
 execute as @e[type=minecraft:iron_golem,tag=sbcore] run effect give @s minecraft:regeneration infinite 0 true
 
 #流浪商人
-execute as @e[type=minecraft:wandering_trader] at @s run tp @s ~ ~ ~ ~18 ~
-execute at @e[type=minecraft:wandering_trader] at @s run particle minecraft:heart ^ ^0.5 ^7.5 0.1 0 0.1 0.1 2 normal
+execute as @e[type=minecraft:wandering_trader] at @s run tp @s ~ ~ ~ ~36 ~
+execute at @e[type=minecraft:wandering_trader] run particle minecraft:heart ^ ^0.5 ^7.48 0.1 0 0.1 0.1 2 normal
+
 execute at @e[type=minecraft:wandering_trader] run effect give @e[distance=..7.5,type=!minecraft:player] minecraft:glowing 15 0 true
 execute at @e[type=minecraft:wandering_trader] run effect give @e[distance=..7.5,type=!minecraft:player] minecraft:bad_omen 15 4 true
 execute at @e[type=minecraft:wandering_trader] run effect give @e[distance=..7.5,type=!minecraft:player] minecraft:resistance 15 0 true
@@ -90,14 +91,17 @@ execute at @e[type=minecraft:allay,tag=!sbcore] at @a[distance=..16,gamemode=!sp
 execute as @e[type=minecraft:camel,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.fall_damage_multiplier",base:0},{id:"generic.jump_strength",base:0.5},{id:"generic.movement_speed",base:0.15},{id:"generic.armor",base:20}]}
 
 #赤足兽
-
 execute as @e run attribute @s minecraft:generic.burning_time modifier remove strider_grace
 
 #execute at @e[type=minecraft:strider,tag=!sbcore] run effect give @e[type=!minecraft:strider,distance=..5,type=!minecraft:player] minecraft:fire_resistance 1 0 true
 #execute at @e[type=minecraft:strider,tag=!sbcore] run effect give @a[distance=..5,gamemode=!spectator] minecraft:fire_resistance 1 0 true
 execute at @e[type=minecraft:strider,tag=!sbcore] as @e[distance=..5] run attribute @s minecraft:generic.burning_time modifier add strider_grace -1 add_multiplied_total
-execute at @e[type=minecraft:strider,tag=!sbcore] at @e[distance=..5,type=!minecraft:player] run particle minecraft:splash ~ ~1 ~ 0.25 0.5 0.25 0 2 normal
+execute at @e[type=minecraft:strider,tag=!sbcore] at @e[distance=..5,type=!minecraft:player,type=!minecraft:strider] run particle minecraft:splash ~ ~1 ~ 0.25 0.5 0.25 0 2 normal
 execute at @e[type=minecraft:strider,tag=!sbcore] at @a[distance=..5,gamemode=!spectator] run particle minecraft:splash ~ ~1 ~ 0.25 0.5 0.25 0 2 normal
+execute at @e[type=minecraft:strider,tag=!sbcore] run particle minecraft:splash ~ ~1 ~ 0.25 0.5 0.25 0 2 normal
+
+execute as @e[type=minecraft:strider,tag=!sbcore] at @s run damage @e[type=minecraft:magma_cube,sort=nearest,limit=1,distance=..3] 0.5 mob_attack by @s
+execute as @e[type=minecraft:strider,tag=!sbcore] at @s run damage @e[type=minecraft:magma_cube,sort=nearest,limit=1,distance=..1.5] 1.5 mob_attack by @s
 
 #僵尸猪人
 execute as @e[type=minecraft:zombified_piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Grumm"',attributes:[{id:"generic.gravity",base:-0.08}]}
