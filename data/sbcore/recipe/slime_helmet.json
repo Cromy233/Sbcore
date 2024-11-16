@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+      "X": {
+        "item": "minecraft:slime_ball"
+      }
+    },
+    "pattern": [
+      "XXX",
+      "X X"
+    ],
+    "result": {
+        "count": 1,
+        "id": "minecraft:leather_helmet",
+        "components": {
+                    "minecraft:item_name": "{\"text\":\"史莱姆帽子\"}",
+                    "minecraft:dyed_color": 9098368,
+                    "minecraft:attribute_modifiers": {
+                        "show_in_tooltip": true,
+                        "modifiers":[
+                            {
+                              "id": "head",
+                              "type": "generic.armor_toughness",
+                              "amount": 1.0,
+                              "slot": "head",
+                              "operation": "add_value"
+                             },
+                             {
+                                "id": "head",
+                                "type": "generic.luck",
+                                "amount": 0.1,
+                                "slot": "head",
+                                "operation": "add_value"
+                            }
+                        ]
+                    }
+        }
+    }
+}

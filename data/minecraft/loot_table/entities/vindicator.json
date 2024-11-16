@@ -3,11 +3,6 @@
   "pools": [
     {
       "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
-        }
-      ],
       "entries": [
         {
           "type": "minecraft:item",
@@ -32,6 +27,45 @@
             }
           ],
           "name": "minecraft:emerald"
+        }
+      ],
+      "rolls": 5.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "random_chance_with_enchanted_bonus",
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.04,
+            "per_level_above_first": 0.02
+          },
+          "enchantment": "minecraft:knockback",
+          "unenchanted_chance": 0.02
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "stored_enchantments": {
+                  "minecraft:knockback": 3
+                },
+                "enchantment_glint_override": false,
+                "enchantments": {
+                  "minecraft:knockback": 3
+                }
+              }
+            }
+          ],
+          "name": "minecraft:bread"
         }
       ],
       "rolls": 5.0

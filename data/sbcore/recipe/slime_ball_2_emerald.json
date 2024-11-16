@@ -1,13 +1,17 @@
 {
-  "type": "crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-      {
-          "item": "minecraft:slime_ball"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+      "#": {
+        "item": "minecraft:slime_ball"
       }
-  ],
-  "result": {
-      "id": "minecraft:emerald",
-      "count": 1
+    },
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "result": {
+      "count": 1,
+      "id": "minecraft:emerald"
+    }
   }
-}

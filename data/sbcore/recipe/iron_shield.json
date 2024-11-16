@@ -21,7 +21,7 @@
                     "minecraft:item_name":"{\"text\":\"铁盾\"}",
                     "minecraft:max_damage": 672,
                     "minecraft:attribute_modifiers": {
-                        "show_in_tooltip":true,
+                        "show_in_tooltip":false,
                         "modifiers":[
                             {
                                 "id":"mainhand",
@@ -65,8 +65,15 @@
                                 "slot":"offhand",
                                 "operation":"add_multiplied_base"
                             }
-                          ]
-                      }
+                        ]
+                      },
+                      "minecraft:lore": [
+                        "[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]",
+                        "[{\"text\":\"手持时：\",\"color\":\"gray\",\"italic\":false}]",
+                        "[{\"text\":\"+3 护甲值\",\"color\":\"blue\",\"italic\":false}]",
+                        "[{\"text\":\"+1 盔甲韧性\",\"color\":\"blue\",\"italic\":false}]",
+                        "[{\"text\":\"-20% 速度\",\"color\":\"red\",\"italic\":false}]"
+                      ]
                     }
                 }
             }

@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+      "X": {
+        "item": "minecraft:slime_ball"
+      }
+    },
+    "pattern": [
+      "X X",
+      "X X"
+    ],
+    "result": {
+        "count": 1,
+        "id": "minecraft:leather_boots",
+        "components": {
+                    "minecraft:item_name": "{\"text\":\"史莱姆靴子\"}",
+                    "minecraft:dyed_color": 9098368,
+                    "minecraft:attribute_modifiers": {
+                        "show_in_tooltip": true,
+                        "modifiers":[
+                            {
+                              "id": "feet",
+                              "type": "generic.armor_toughness",
+                              "amount": 1.0,
+                              "slot": "feet",
+                              "operation": "add_value"
+                             },
+                             {
+                                "id": "feet",
+                                "type": "generic.luck",
+                                "amount": 0.1,
+                                "slot": "feet",
+                                "operation": "add_value"
+                            }
+                        ]
+                    }
+        }
+    }
+}

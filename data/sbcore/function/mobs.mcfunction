@@ -11,9 +11,11 @@ execute at @e[type=minecraft:drowned,tag=sbcore] run fill ~1 ~ ~1 ~-1 ~ ~-1 wate
 
 #僵尸村民
 execute as @e[type=minecraft:zombie_villager,tag=!sbcore] run effect give @s minecraft:invisibility infinite 255 true
-execute at @e[type=minecraft:zombie_villager,tag=!sbcore] run summon minecraft:zombie_villager ~ ~ ~ {Tags:["sbcore"],Passengers:[{id:"minecraft:ravager",attributes:[{id:"generic.scale",base:0.4},{id:"generic.max_health",base:25},{id:"generic.movement_speed",base:0.15}]}]}
+execute at @e[type=minecraft:zombie_villager,tag=!sbcore] run summon minecraft:zombie_villager ~ ~ ~ {Tags:["sbcore"],Passengers:[{id:"minecraft:ravager",Tags:["sbcore"],attributes:[{id:"generic.scale",base:0.4},{id:"generic.max_health",base:20}]}]}
 execute as @e[type=minecraft:zombie_villager,tag=!sbcore] run tp @s 0 -150 0
 execute as @e[type=minecraft:zombie_villager,tag=!sbcore] run kill @s
+
+
 
 #劫掠者
 execute as @e[type=minecraft:pillager,tag=!sbcore] run data merge entity @s {HandDropChances:[0.2f,0.2f],HandItems:[{id:"minecraft:crossbow",components:{"minecraft:enchantments":{levels:{"minecraft:quick_charge":3,"minecraft:mending":1,"minecraft:unbreaking":3}},"minecraft:charged_projectiles":[{id:"minecraft:firework_rocket",components:{"minecraft:fireworks":{explosions:[{has_trail:1b,shape:"large_ball",colors:[I;1973019]}],flight_duration:3}}}]}},{}]}
@@ -256,3 +258,9 @@ execute as @e[type=minecraft:shulker,tag=sbcore] at @s unless entity @a[distance
 execute as @e[type=minecraft:piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Grumm"',attributes:[{id:"generic.gravity",base:-0.08},{id:"generic.fall_damage_multiplier",base:2}]}
 execute as @e[type=minecraft:piglin,tag=sbcore,nbt={OnGround:1b}] run tag @s remove sbcore
 effect give @e[type=minecraft:piglin,tag=sbcore,nbt={OnGround:0b}] minecraft:resistance 1 2 true
+
+#凋灵
+#execute as @e[type=minecraft:wither] at @s if entity @a[distance=..5,gamemode=!spectator] run tp ^ ^-0.2 ^-0.2
+execute as @e[type=minecraft:wither] at @s unless block ~ ~4 ~ air as @e[type=!#minecraft:undead,distance=..10,type=!minecraft:player] run damage @s 5 minecraft:wither by @e[type=minecraft:wither,limit=1]
+execute as @e[type=minecraft:wither] at @s unless block ~ ~4 ~ air as @a[distance=..10] run damage @s 5.0 minecraft:player_explosion by @e[type=minecraft:wither,limit=1]
+execute as @e[type=minecraft:wither] at @s unless block ~ ~4 ~ air run particle minecraft:explosion ~ ~ ~ 3.5 3.5 3.5 0 10 normal

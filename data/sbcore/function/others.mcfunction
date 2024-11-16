@@ -72,9 +72,9 @@ execute as @e[type=minecraft:armor_stand] at @s run fill ^6 ^ ^6 ^6 ^ ^6 fire re
 execute as @e[type=minecraft:armor_stand] at @s run fill ^-6 ^ ^-6 ^-6 ^ ^-6 fire replace air
 execute as @e[type=minecraft:armor_stand] at @s positioned ~ ~3 ~ run particle minecraft:flame ^6 ^ ^6 0.1 1.5 0.1 0.01 10 normal
 execute as @e[type=minecraft:armor_stand] at @s positioned ~ ~3 ~ run particle minecraft:flame ^-6 ^ ^-6 0.1 1.5 0.1 0.01 10 force
-execute at @e[type=minecraft:armor_stand] run effect give @e[distance=..6.5,type=!minecraft:player] minecraft:resistance 1 0 true
+execute at @e[type=minecraft:armor_stand] run effect give @e[distance=..6.5,type=!minecraft:player] minecraft:resistance 1 1 true
 execute at @e[type=minecraft:armor_stand] run effect give @e[distance=..6.5,type=!minecraft:player] minecraft:strength 1 0 true
-execute at @e[type=minecraft:armor_stand] run effect give @a[distance=..6.5,gamemode=!spectator] minecraft:resistance 1 0 true
+execute at @e[type=minecraft:armor_stand] run effect give @a[distance=..6.5,gamemode=!spectator] minecraft:resistance 1 1 true
 execute at @e[type=minecraft:armor_stand] run effect give @a[distance=..6.5,gamemode=!spectator] minecraft:strength 1 0 true
 
 #羊驼唾沫

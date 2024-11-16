@@ -60,6 +60,7 @@ execute as @e[type=minecraft:zoglin,tag=!sbcore] run data merge entity @s {Tags:
 execute as @e[type=minecraft:frog,tag=!sbcore] at @s if entity @e[distance=..5,type=!minecraft:frog,type=!minecraft:player] run data modify entity @s Motion set from entity @e[type=!minecraft:frog,limit=1,sort=nearest,type=!minecraft:player] Motion
 execute as @e[type=minecraft:frog,tag=!sbcore] at @s if entity @e[distance=..5,type=!minecraft:frog,type=!minecraft:player] run data modify entity @s Rotation set from entity @e[type=!minecraft:frog,limit=1,sort=nearest,type=!minecraft:player] Rotation
 execute at @e[type=minecraft:frog,tag=!sbcore] as @e[type=!minecraft:frog,distance=..2] run damage @s 2.0 minecraft:mob_attack by @e[type=minecraft:frog,tag=!sbcore,limit=1,sort=nearest]
+execute as @e[type=minecraft:frog,tag=!sbcore] on leasher at @s as @e[type=minecraft:frog,tag=!sbcore,limit=1,sort=nearest] at @s facing entity @p feet run tp ^ ^ ^0.2
 
 #鱿鱼
 execute as @e[type=minecraft:squid,tag=!sbcore] run effect give @s invisibility infinite 255 true
