@@ -79,14 +79,14 @@
                     {
                       "id": "mainhand",
                       "slot": "mainhand",
-                      "type": "generic.movement_speed",
+                      "type": "minecraft:generic.movement_speed",
                       "amount": -0.4,
                       "operation": "add_multiplied_total"
                     },
                     {
                       "id": "offhand",
                       "slot": "offhand",
-                      "type": "generic.movement_speed",
+                      "type": "minecraft:generic.movement_speed",
                       "amount": -0.4,
                       "operation": "add_multiplied_total"
                     }

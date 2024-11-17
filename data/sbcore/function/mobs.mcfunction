@@ -1,43 +1,47 @@
 #幻翼
 execute as @e[type=minecraft:phantom,tag=!sbcore] run effect give @s minecraft:invisibility infinite 255 true
-execute at @e[type=minecraft:phantom,tag=!sbcore] run summon minecraft:phantom ~ ~ ~ {Size:3,Tags:["sbcore"],attributes:[{id:"generic.max_health",base:3}],Passengers:[{id:"minecraft:tnt_minecart"}]}
+execute at @e[type=minecraft:phantom,tag=!sbcore] run summon minecraft:phantom ~ ~ ~ {Size:3,Tags:["sbcore"],attributes:[{id:"minecraft:generic.max_health",base:3}],Passengers:[{id:"minecraft:tnt_minecart"}]}
 execute as @e[type=minecraft:phantom,tag=!sbcore] run tp @s 0 -150 0
 execute as @e[type=minecraft:phantom,tag=!sbcore] run kill @s
 
 #溺尸
 execute as @e[type=minecraft:drowned,nbt={IsBaby:1b},tag=!sbcore] run data merge entity @s {HandItems:[{},{id:"minecraft:trident"}]}
-execute as @e[type=minecraft:drowned,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],HandDropChances:[1f,1f],attributes:[{id:"generic.water_movement_efficiency",base:1}]}
-execute at @e[type=minecraft:drowned,tag=sbcore] run fill ~1 ~ ~1 ~-1 ~ ~-1 water[level=5] replace air
+execute as @e[type=minecraft:drowned,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],HandDropChances:[1f,1f],attributes:[{id:"minecraft:generic.water_movement_efficiency",base:1}]}
+execute at @e[type=minecraft:drowned,tag=sbcore] run fill ~1 ~ ~1 ~-1 ~ ~-1 water[level=5] replace #air
 
 #僵尸村民
 execute as @e[type=minecraft:zombie_villager,tag=!sbcore] run effect give @s minecraft:invisibility infinite 255 true
-execute at @e[type=minecraft:zombie_villager,tag=!sbcore] run summon minecraft:zombie_villager ~ ~ ~ {Tags:["sbcore"],Passengers:[{id:"minecraft:ravager",Tags:["sbcore"],attributes:[{id:"generic.scale",base:0.4},{id:"generic.max_health",base:20}]}]}
+execute at @e[type=minecraft:zombie_villager,tag=!sbcore] run summon minecraft:zombie_villager ~ ~ ~ {Tags:["sbcore"],Passengers:[{id:"minecraft:ravager",Tags:["sbcore"],attributes:[{id:"minecraft:generic.scale",base:0.4},{id:"minecraft:generic.max_health",base:25}]}]}
 execute as @e[type=minecraft:zombie_villager,tag=!sbcore] run tp @s 0 -150 0
 execute as @e[type=minecraft:zombie_villager,tag=!sbcore] run kill @s
 
-
+execute as @e[type=minecraft:ravager,tag=sbcore,nbt={attributes:[{id:"minecraft:generic.scale",base:0.4}]}] run effect give @s minecraft:slowness infinite 0 true
+execute as @e[type=minecraft:ravager,tag=sbcore,nbt={attributes:[{id:"minecraft:generic.scale",base:0.4}]}] run attribute @s minecraft:generic.attack_damage modifier add ravager_baby -0.6 add_multiplied_total
 
 #劫掠者
 execute as @e[type=minecraft:pillager,tag=!sbcore] run data merge entity @s {HandDropChances:[0.2f,0.2f],HandItems:[{id:"minecraft:crossbow",components:{"minecraft:enchantments":{levels:{"minecraft:quick_charge":3,"minecraft:mending":1,"minecraft:unbreaking":3}},"minecraft:charged_projectiles":[{id:"minecraft:firework_rocket",components:{"minecraft:fireworks":{explosions:[{has_trail:1b,shape:"large_ball",colors:[I;1973019]}],flight_duration:3}}}]}},{}]}
 
 #普通僵尸
-execute as @e[type=minecraft:zombie,tag=!sbcore,nbt={IsBaby:0b}] run data merge entity @s {CanPickUpLoot:1b,CanBreakDoors:1b,attributes:[{id:"zombie.spawn_reinforcements",base:1},{id:"generic.max_health",base:10},{id:"generic.knockback_resistance",base:0.5}]}
+execute as @e[type=minecraft:zombie,tag=!sbcore,nbt={IsBaby:0b}] run data merge entity @s {CanPickUpLoot:1b,CanBreakDoors:1b,attributes:[{id:"zombie.spawn_reinforcements",base:1},{id:"minecraft:generic.max_health",base:10},{id:"minecraft:generic.knockback_resistance",base:0.5}]}
 
 #小僵尸
-execute as @e[type=minecraft:zombie,nbt={IsBaby:1b},tag=!sbcore] run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin"}],IsBaby:0b,Tags:["sbcore"],HandItems:[{id:"minecraft:mace"},{}],HandDropChances:[0f,1f],attributes:[{id:"generic.jump_strength",base:1},{id:"generic.fall_damage_multiplier",base:0},{id:"generic.movement_speed",base:0.35}]}
+execute as @e[type=minecraft:zombie,nbt={IsBaby:1b},tag=!sbcore] run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin"}],IsBaby:0b,Tags:["sbcore"],HandItems:[{id:"minecraft:mace"},{}],HandDropChances:[0f,1f],attributes:[{id:"minecraft:generic.jump_strength",base:1},{id:"minecraft:generic.fall_damage_multiplier",base:0},{id:"minecraft:generic.movement_speed",base:0.35}]}
 
 #卫道士
-execute as @e[type=minecraft:vindicator,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],HandDropChances:[0f,1f],HandItems:[{id:"minecraft:slime_ball",components:{enchantments:{"minecraft:knockback":15},}},{}],attributes:[{id:"generic.attack_damage",base:2},{id:"generic.follow_range",base:64}]}
+execute as @e run attribute @s minecraft:generic.attack_knockback modifier remove vindicator_knockback
+
+execute as @e[type=minecraft:vindicator,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],HandDropChances:[0f,1f],HandItems:[{id:"minecraft:slime_ball",components:{enchantments:{"minecraft:knockback":15},}},{}],attributes:[{id:"minecraft:generic.attack_damage",base:2},{id:"minecraft:generic.follow_range",base:64}]}
+execute as @e[type=minecraft:vindicator,tag=sbcore] on attacker if entity @s[type=minecraft:iron_golem] run attribute @s minecraft:generic.knockback_resistance modifier add vindicator_knockback -0.5 add_multiplied_total
 
 #苦力怕
 execute as @e[type=creeper,tag=!sbcore] at @s unless entity @a[distance=..5,gamemode=!spectator] run effect give @s minecraft:invisibility 1 255 true
-execute as @e[type=creeper,tag=!sbcore] at @s if entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {powered:1b,Tags:["sbcore"],attributes:[{id:"generic.max_health",base:6}]}
+execute as @e[type=creeper,tag=!sbcore] at @s if entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {powered:1b,Tags:["sbcore"],attributes:[{id:"minecraft:generic.max_health",base:6}]}
 
 #烈焰人
 execute as @e run attribute @s minecraft:generic.burning_time modifier remove blaze_curse
 execute as @e run attribute @s minecraft:generic.safe_fall_distance modifier remove blaze_curse
 
-execute as @e[type=minecraft:blaze,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],Health:40f,attributes:[{id:"generic.movement_speed",base:0.3},{id:"generic.max_health",base:40}]}
+execute as @e[type=minecraft:blaze,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],Health:40f,attributes:[{id:"minecraft:generic.movement_speed",base:0.3},{id:"minecraft:generic.max_health",base:40}]}
 execute at @e[type=minecraft:blaze,tag=sbcore] as @e[distance=..7.5] run attribute @s minecraft:generic.burning_time modifier add blaze_curse 1 add_multiplied_total
 execute at @e[type=minecraft:blaze,tag=sbcore] as @e[distance=..7.5] run attribute @s minecraft:generic.safe_fall_distance modifier add blaze_curse -2.5 add_value
 execute at @e[type=minecraft:blaze,tag=sbcore] run effect give @e[distance=..7.5] minecraft:wind_charged 1 0 false
@@ -53,8 +57,8 @@ execute as @e[type=minecraft:ghast,tag=!sbcore] run kill @s
 #骷髅
 execute at @e[type=minecraft:skeleton,tag=!sbcore] if entity @a[distance=..3,gamemode=!spectator] run particle minecraft:poof ~ ~1 ~ 0.5 0.5 0.5 0.5 50 normal
 execute at @e[type=minecraft:skeleton,tag=!sbcore] if entity @a[distance=..3,gamemode=!spectator] run playsound minecraft:entity.breeze.wind_burst hostile @a ~ ~ ~
-execute as @e[type=minecraft:skeleton,tag=!sbcore] at @s if entity @a[distance=..3,gamemode=!spectator] run data merge entity @s {Tags:["sbcore"],ArmorItems:[{id:"air"},{id:"air"},{id:"minecraft:iron_chestplate"},{id:"air"}],ArmorDropChances:[0f,0f,0.05f,0f],Health:20f,attributes:[{id:"generic.follow_range",base:64},{id:"generic.attack_damage",base:-1}],HandDropChances:[0f,0f],HandItems:[{id:"minecraft:iron_sword"},{}]}
-execute at @e[type=minecraft:skeleton] if block ~ ~-1 ~ minecraft:deepslate run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:bone_block replace minecraft:deepslate
+execute as @e[type=minecraft:skeleton,tag=!sbcore] at @s if entity @a[distance=..3,gamemode=!spectator] run data merge entity @s {Tags:["sbcore"],ArmorItems:[{id:"air"},{id:"air"},{id:"minecraft:iron_chestplate"},{id:"air"}],ArmorDropChances:[0f,0f,0.05f,0f],Health:20f,attributes:[{id:"minecraft:generic.follow_range",base:64},{id:"minecraft:generic.attack_damage",base:-1}],HandDropChances:[0f,0f],HandItems:[{id:"minecraft:iron_sword"},{}]}
+execute at @e[type=minecraft:skeleton] if block ~ ~-0.5 ~ minecraft:deepslate run fill ~ ~-0.5 ~ ~ ~-0.5 ~ minecraft:bone_block replace minecraft:deepslate
 
 #末影人
 #execute in minecraft:overworld as @e[type=minecraft:enderman,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],carriedBlockState:{Name:"minecraft:obsidian"}}
@@ -115,7 +119,7 @@ execute at @e[type=minecraft:witch,tag=!sbcore] run effect give @e[type=minecraf
 execute at @e[type=minecraft:witch,tag=!sbcore] at @e[type=minecraft:iron_golem,distance=3..10] run particle minecraft:effect ~ ~1 ~ 0.25 0.5 0.25 0.01 1 normal
 
 #凋零骷髅
-execute as @e[type=minecraft:wither_skeleton,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],HandItems:[{id:"minecraft:netherite_sword"},{id:"minecraft:shield"}],HandDropChances:[0f,0f],ArmorItems:[{id:"minecraft:netherite_boots"},{id:"minecraft:netherite_leggings"},{id:"minecraft:netherite_chestplate"},{id:"minecraft:netherite_helmet"}],ArmorDropChances:[0f,0f,0f,0f],attributes:[{id:"generic.knockback_resistance",base:1},{id:"generic.movement_speed",base:0.15},{id:"generic.armor",base:30},{id:"generic.armor_toughness",base:20}]}
+execute as @e[type=minecraft:wither_skeleton,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],HandItems:[{id:"minecraft:netherite_sword"},{id:"minecraft:shield"}],HandDropChances:[0f,0f],ArmorItems:[{id:"minecraft:netherite_boots"},{id:"minecraft:netherite_leggings"},{id:"minecraft:netherite_chestplate"},{id:"minecraft:netherite_helmet"}],ArmorDropChances:[0f,0f,0f,0f],attributes:[{id:"minecraft:generic.knockback_resistance",base:1},{id:"minecraft:generic.movement_speed",base:0.15},{id:"minecraft:generic.armor",base:30},{id:"minecraft:generic.armor_toughness",base:20}]}
 
 execute at @e[type=minecraft:wither_skeleton,tag=sbcore] at @e[type=minecraft:ender_pearl,distance=..3] run particle minecraft:sweep_attack ~ ~ ~ 0 0 0 1 1 force
 execute at @e[type=minecraft:wither_skeleton,tag=sbcore] at @e[type=minecraft:trident,distance=..3,nbt={inGround:0b}] run particle minecraft:sweep_attack ~ ~ ~ 0 0 0 1 1 force
@@ -133,7 +137,7 @@ execute at @e[type=minecraft:slime,tag=sbcore] run effect give @a[distance=..5,g
 
 #沼骸
 execute as @e[type=minecraft:bogged,tag=!sbcore] run effect give @s minecraft:invisibility infinite 255 true
-execute at @e[type=minecraft:bogged,tag=!sbcore] run summon minecraft:bogged ~ ~ ~ {Tags:["sbcore"],HandItems:[{id:"minecraft:wooden_sword"},{}],Passengers:[{id:"minecraft:slime",Size:1,attributes:[{id:"generic.scale",base:0.5}]}],attributes:[{id:"generic.movement_speed",base:0.2},{id:"generic.follow_range",base:12}]}
+execute at @e[type=minecraft:bogged,tag=!sbcore] run summon minecraft:bogged ~ ~ ~ {Tags:["sbcore"],HandItems:[{id:"minecraft:wooden_sword"},{}],Passengers:[{id:"minecraft:slime",Size:1,attributes:[{id:"minecraft:generic.scale",base:0.5}]}],attributes:[{id:"minecraft:generic.movement_speed",base:0.2},{id:"minecraft:generic.follow_range",base:12}]}
 execute as @e[type=minecraft:bogged,tag=!sbcore] run tp @s 0 -150 0
 execute as @e[type=minecraft:bogged,tag=!sbcore] run kill @s
 
@@ -145,7 +149,7 @@ execute at @e[type=minecraft:bogged,tag=sbcore] if entity @a[distance=6..18,game
 execute at @e[type=minecraft:bogged,tag=sbcore] at @a[distance=6..18,gamemode=!spectator] run particle minecraft:spore_blossom_air ~ ~1 ~ 0.1 0.5 0.1 0 1 normal
 
 #蜘蛛
-execute as @e[type=minecraft:spider,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.knockback_resistance",base:0.5},{id:"generic.water_movement_efficiency",base:0.5},{id:"minecraft:generic.step_height",base:1},{id:"minecraft:generic.safe_fall_distance",base:10}]}
+execute as @e[type=minecraft:spider,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"minecraft:generic.knockback_resistance",base:0.5},{id:"minecraft:generic.water_movement_efficiency",base:0.5},{id:"minecraft:generic.step_height",base:1},{id:"minecraft:generic.safe_fall_distance",base:10}]}
 execute as @e[type=minecraft:spider,tag=sbcore] at @s if entity @a[distance=..2.5,gamemode=!spectator] run effect give @s minecraft:invisibility 1 0 true
 execute at @e[type=minecraft:spider,tag=sbcore] run effect give @e[distance=..7.5,type=!minecraft:player] minecraft:weaving 30 0 false
 execute at @e[type=minecraft:spider,tag=sbcore] run effect give @a[distance=..7.5,gamemode=!spectator] minecraft:weaving 30 0 false
@@ -167,13 +171,13 @@ execute at @e[type=minecraft:evoker,tag=!sbcore] run xp add @a[distance=..2.5,ga
 
 #旋风人
 execute as @e[type=minecraft:breeze,tag=!sbcore] at @s if entity @e[distance=0.01..5,type=!minecraft:player,type=!minecraft:breeze_wind_charge,type=!minecraft:item,type=!minecraft:wind_charge,type=!minecraft:painting,type=!minecraft:wind_charge,type=!minecraft:item_frame,type=!minecraft:glow_item_frame,type=!minecraft:fireball] run ride @e[distance=0.01..5,type=!minecraft:player,limit=1,sort=nearest] mount @s
-execute as @e[type=minecraft:breeze,tag=!sbcore] at @s if entity @e[distance=0.01..5,type=!minecraft:player,type=!minecraft:breeze_wind_charge,type=!minecraft:item,type=!minecraft:wind_charge,type=!minecraft:painting,type=!minecraft:wind_charge,type=!minecraft:item_frame,type=!minecraft:glow_item_frame,type=!minecraft:fireball] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.gravity",base:0.2}]}
+execute as @e[type=minecraft:breeze,tag=!sbcore] at @s if entity @e[distance=0.01..5,type=!minecraft:player,type=!minecraft:breeze_wind_charge,type=!minecraft:item,type=!minecraft:wind_charge,type=!minecraft:painting,type=!minecraft:wind_charge,type=!minecraft:item_frame,type=!minecraft:glow_item_frame,type=!minecraft:fireball] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"minecraft:generic.gravity",base:0.2}]}
 execute at @e[type=minecraft:breeze] run effect give @e[type=!minecraft:breeze,distance=..2.5] minecraft:slow_falling 1 0 true
 
 #疣猪兽
 execute as @a run attribute @s minecraft:generic.fall_damage_multiplier modifier remove hoglin_feather_falling
 
-execute as @e[type=minecraft:hoglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.attack_knockback",base:3},{id:"generic.attack_damage",base:5}]}
+execute as @e[type=minecraft:hoglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"minecraft:generic.attack_knockback",base:3},{id:"minecraft:generic.attack_damage",base:5}]}
 execute at @e[type=minecraft:hoglin,tag=sbcore] as @a[distance=..5,gamemode=!spectator] run attribute @s minecraft:generic.fall_damage_multiplier modifier add hoglin_feather_falling -0.9 add_multiplied_base
 
 #岩浆怪
@@ -181,14 +185,14 @@ execute as @e[type=minecraft:magma_cube] run attribute @s minecraft:generic.scal
 execute as @e[type=minecraft:magma_cube] run attribute @s minecraft:generic.attack_damage modifier remove magma
 
 execute as @e[type=minecraft:magma_cube,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],NoGravity:1b}
-execute at @e[type=minecraft:magma_cube,tag=sbcore,nbt={OnGround:1b}] run fill ~ ~ ~ ~ ~ ~ fire replace air
+execute at @e[type=minecraft:magma_cube,tag=sbcore,nbt={OnGround:1b}] run fill ~ ~ ~ ~ ~ ~ fire replace #air
 execute as @e[type=minecraft:magma_cube,tag=sbcore,nbt={NoGravity:1b}] run attribute @s minecraft:generic.scale modifier add magma -0.5 add_multiplied_total
 execute as @e[type=minecraft:magma_cube,tag=sbcore,nbt={OnGround:1b}] run attribute @s minecraft:generic.attack_damage modifier add magma -0.5 add_multiplied_total
 
 execute at @e[type=minecraft:magma_cube,tag=sbcore,nbt={NoGravity:1b}] run particle minecraft:flame ~ ~ ~ 1 -1 1 0.01 1 force
 
 #监守者
-execute as @e[type=minecraft:warden,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.max_health",base:150},{id:"generic.scale",base:0.9},{id:"generic.water_movement_efficiency",base:1}]}
+execute as @e[type=minecraft:warden,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"minecraft:generic.max_health",base:150},{id:"minecraft:generic.scale",base:0.9},{id:"minecraft:generic.water_movement_efficiency",base:1}]}
 execute as @e[type=minecraft:warden,tag=sbcore,nbt={Brain:{memories:{"minecraft:sonic_boom_cooldown":{value:{},ttl:0L}}}}] run data merge entity @s {Brain:{memories:{"minecraft:sonic_boom_cooldown":{value:{},ttl:1200L}}}}
 #execute at @e[type=minecraft:warden,tag=sbcore] run effect clear @a[distance=..16,gamemode=!spectator] darkness
 
@@ -227,10 +231,10 @@ execute at @e[type=minecraft:stray] if block ~ ~-1 ~ minecraft:water run fill ~ 
 #远古守卫者
 execute as @a run attribute @s minecraft:generic.gravity modifier remove guardian_curse
 
-execute as @e[type=minecraft:elder_guardian,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],Health:150,attributes:[{id:"generic.max_health",base:150},{id:"generic.armor",base:10}]}
+execute as @e[type=minecraft:elder_guardian,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],Health:150,attributes:[{id:"minecraft:generic.max_health",base:150},{id:"minecraft:generic.armor",base:10}]}
 execute at @e[type=minecraft:elder_guardian,tag=sbcore] unless entity @e[type=minecraft:guardian,distance=..16] run tp @e[type=minecraft:guardian,distance=16..32,limit=3,sort=nearest] ~ ~ ~
 execute at @e[type=minecraft:elder_guardian,tag=sbcore] unless entity @e[type=minecraft:guardian,distance=..8] run tp @e[type=minecraft:guardian,distance=..16,limit=3,sort=furthest] ~ ~ ~
-execute at @e[type=minecraft:elder_guardian,tag=sbcore] run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 water[level=5] replace air
+execute at @e[type=minecraft:elder_guardian,tag=sbcore] run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 water[level=5] replace #air
 execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..3.5,gamemode=!spectator] run tp @s ~ ~ ~ ~90 ~
 execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..3.5,gamemode=!spectator] run effect give @s minecraft:resistance 1 2 true
 execute as @e[type=minecraft:elder_guardian,tag=sbcore] at @s if entity @a[distance=..3.5,gamemode=!spectator] as @e[distance=..3,type=!minecraft:elder_guardian] run damage @s 7.0 minecraft:mob_attack by @e[type=minecraft:elder_guardian,tag=sbcore,limit=1,sort=nearest]
@@ -251,16 +255,19 @@ execute at @e[type=minecraft:elder_guardian,tag=sbcore] as @e[type=minecraft:ite
 #execute at @e[type=minecraft:shulker,tag=!sbcore] run loot insert ~ ~ ~ loot minecraft:chests/end_city_treasure
 #execute at @e[type=minecraft:shulker,tag=!sbcore] run loot insert ~ ~ ~ loot minecraft:chests/end_city_treasure
 
-execute as @e[type=minecraft:shulker,tag=!sbcore] at @s if entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"generic.scale",base:1}]}
-execute as @e[type=minecraft:shulker,tag=sbcore] at @s unless entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {Tags:[""],attributes:[{id:"generic.scale",base:0}]}
+execute as @e[type=minecraft:shulker,tag=!sbcore] at @s if entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {Tags:["sbcore"],attributes:[{id:"minecraft:generic.scale",base:1}]}
+execute as @e[type=minecraft:shulker,tag=sbcore] at @s unless entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {Tags:[""],attributes:[{id:"minecraft:generic.scale",base:0}]}
 
 #猪灵
-execute as @e[type=minecraft:piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Grumm"',attributes:[{id:"generic.gravity",base:-0.08},{id:"generic.fall_damage_multiplier",base:2}]}
+execute as @e[type=minecraft:piglin,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],CustomName:'"Grumm"',attributes:[{id:"minecraft:generic.gravity",base:-0.08},{id:"minecraft:generic.fall_damage_multiplier",base:2}]}
 execute as @e[type=minecraft:piglin,tag=sbcore,nbt={OnGround:1b}] run tag @s remove sbcore
 effect give @e[type=minecraft:piglin,tag=sbcore,nbt={OnGround:0b}] minecraft:resistance 1 2 true
 
 #凋灵
-#execute as @e[type=minecraft:wither] at @s if entity @a[distance=..5,gamemode=!spectator] run tp ^ ^-0.2 ^-0.2
-execute as @e[type=minecraft:wither] at @s unless block ~ ~4 ~ air as @e[type=!#minecraft:undead,distance=..10,type=!minecraft:player] run damage @s 5 minecraft:wither by @e[type=minecraft:wither,limit=1]
-execute as @e[type=minecraft:wither] at @s unless block ~ ~4 ~ air as @a[distance=..10] run damage @s 5.0 minecraft:player_explosion by @e[type=minecraft:wither,limit=1]
-execute as @e[type=minecraft:wither] at @s unless block ~ ~4 ~ air run particle minecraft:explosion ~ ~ ~ 3.5 3.5 3.5 0 10 normal
+execute as @e[type=minecraft:wither] at @s if entity @a[distance=..5,gamemode=survival] run tp ^ ^-0.2 ^-0.2
+execute as @e[type=minecraft:wither] at @s unless block ~ ~4 ~ #air as @e[type=!#minecraft:undead,distance=..10,type=!minecraft:player] run damage @s 5 minecraft:wither by @e[type=minecraft:wither,limit=1]
+execute as @e[type=minecraft:wither] at @s unless block ~ ~4 ~ #air as @a[distance=..8] run damage @s 5.0 minecraft:player_explosion by @e[type=minecraft:wither,limit=1]
+execute as @e[type=minecraft:wither] at @s unless block ~ ~4 ~ #air run particle minecraft:explosion ~ ~ ~ 3 3 3 0 10 normal
+
+#劫掠兽
+execute as @e[type=minecraft:ravager,tag=!sbcore] run data merge entity @s {Tags:["sbcore"],ArmorItems:[{id:"minecraft:short_grass"},{},{},{}],ArmorDropChances:[0f,0f,0f,0f]}

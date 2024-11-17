@@ -42,49 +42,49 @@
                   {
                     "id": "head",
                     "slot": "head",
-                    "type": "generic.armor",
+                    "type": "minecraft:generic.armor",
                     "amount": 3,
                     "operation": "add_value"
                   },
                   {
                     "id": "head",
                     "slot": "head",
-                    "type": "generic.armor_toughness",
+                    "type": "minecraft:generic.armor_toughness",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "id": "head",
                     "slot": "head",
-                    "type": "generic.oxygen_bonus",
+                    "type": "minecraft:generic.oxygen_bonus",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "id": "head",
                     "slot": "head",
-                    "type": "generic.water_movement_efficiency",
+                    "type": "minecraft:generic.water_movement_efficiency",
                     "amount": 0.25,
                     "operation": "add_value"
                   },
                   {
                     "id": "head",
                     "slot": "head",
-                    "type": "player.submerged_mining_speed",
+                    "type": "minecraft:player.submerged_mining_speed",
                     "amount": 1,
                     "operation": "add_multiplied_total"
                   },
                   {
                     "id": "head",
                     "slot": "head",
-                    "type": "generic.burning_time",
+                    "type": "minecraft:generic.burning_time",
                     "amount": -0.25,
                     "operation": "add_multiplied_base"
                   },
                   {
                     "id": "head",
                     "slot": "head",
-                    "type": "generic.fall_damage_multiplier",
+                    "type": "minecraft:generic.fall_damage_multiplier",
                     "amount": -0.2,
                     "operation": "add_multiplied_base"
                   }
@@ -136,49 +136,49 @@
                   {
                     "id": "chest",
                     "slot": "chest",
-                    "type": "generic.armor",
+                    "type": "minecraft:generic.armor",
                     "amount": 8,
                     "operation": "add_value"
                   },
                   {
                     "id": "chest",
                     "slot": "chest",
-                    "type": "generic.armor_toughness",
+                    "type": "minecraft:generic.armor_toughness",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "id": "chest",
                     "slot": "chest",
-                    "type": "generic.oxygen_bonus",
+                    "type": "minecraft:generic.oxygen_bonus",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "id": "chest",
                     "slot": "chest",
-                    "type": "generic.water_movement_efficiency",
+                    "type": "minecraft:generic.water_movement_efficiency",
                     "amount": 0.25,
                     "operation": "add_value"
                   },
                   {
                     "id": "chest",
                     "slot": "chest",
-                    "type": "player.submerged_mining_speed",
+                    "type": "minecraft:player.submerged_mining_speed",
                     "amount": 1,
                     "operation": "add_multiplied_total"
                   },
                   {
                     "id": "chest",
                     "slot": "chest",
-                    "type": "generic.burning_time",
+                    "type": "minecraft:generic.burning_time",
                     "amount": -0.25,
                     "operation": "add_multiplied_base"
                   },
                   {
                     "id": "chest",
                     "slot": "chest",
-                    "type": "generic.fall_damage_multiplier",
+                    "type": "minecraft:generic.fall_damage_multiplier",
                     "amount": -0.2,
                     "operation": "add_multiplied_base"
                   }
@@ -231,49 +231,49 @@
                   {
                     "id": "legs",
                     "slot": "legs",
-                    "type": "generic.armor",
+                    "type": "minecraft:generic.armor",
                     "amount": 6,
                     "operation": "add_value"
                   },
                   {
                     "id": "legs",
                     "slot": "legs",
-                    "type": "generic.armor_toughness",
+                    "type": "minecraft:generic.armor_toughness",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "id": "legs",
                     "slot": "legs",
-                    "type": "generic.oxygen_bonus",
+                    "type": "minecraft:generic.oxygen_bonus",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "id": "legs",
                     "slot": "legs",
-                    "type": "generic.water_movement_efficiency",
+                    "type": "minecraft:generic.water_movement_efficiency",
                     "amount": 0.25,
                     "operation": "add_value"
                   },
                   {
                     "id": "legs",
                     "slot": "legs",
-                    "type": "player.submerged_mining_speed",
+                    "type": "minecraft:player.submerged_mining_speed",
                     "amount": 1,
                     "operation": "add_multiplied_total"
                   },
                   {
                     "id": "legs",
                     "slot": "legs",
-                    "type": "generic.burning_time",
+                    "type": "minecraft:generic.burning_time",
                     "amount": -0.25,
                     "operation": "add_multiplied_base"
                   },
                   {
                     "id": "legs",
                     "slot": "legs",
-                    "type": "generic.fall_damage_multiplier",
+                    "type": "minecraft:generic.fall_damage_multiplier",
                     "amount": -0.2,
                     "operation": "add_multiplied_base"
                   }
@@ -325,49 +325,49 @@
                   {
                     "id": "feet",
                     "slot": "feet",
-                    "type": "generic.armor",
+                    "type": "minecraft:generic.armor",
                     "amount": 3,
                     "operation": "add_value"
                   },
                   {
                     "id": "feet",
                     "slot": "feet",
-                    "type": "generic.armor_toughness",
+                    "type": "minecraft:generic.armor_toughness",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "id": "feet",
                     "slot": "feet",
-                    "type": "generic.oxygen_bonus",
+                    "type": "minecraft:generic.oxygen_bonus",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "id": "feet",
                     "slot": "feet",
-                    "type": "generic.water_movement_efficiency",
+                    "type": "minecraft:generic.water_movement_efficiency",
                     "amount": 0.25,
                     "operation": "add_value"
                   },
                   {
                     "id": "feet",
                     "slot": "feet",
-                    "type": "player.submerged_mining_speed",
+                    "type": "minecraft:player.submerged_mining_speed",
                     "amount": 1,
                     "operation": "add_multiplied_total"
                   },
                   {
                     "id": "feet",
                     "slot": "feet",
-                    "type": "generic.burning_time",
+                    "type": "minecraft:generic.burning_time",
                     "amount": -0.25,
                     "operation": "add_multiplied_base"
                   },
                   {
                     "id": "feet",
                     "slot": "feet",
-                    "type": "generic.fall_damage_multiplier",
+                    "type": "minecraft:generic.fall_damage_multiplier",
                     "amount": -0.2,
                     "operation": "add_multiplied_base"
                   }
@@ -418,14 +418,14 @@
                     {
                       "id": "mainhand",
                       "slot": "mainhand",
-                      "type": "generic.attack_damage",
+                      "type": "minecraft:generic.attack_damage",
                       "amount": 11,
                       "operation": "add_value"
                     },
                     {
                       "id": "mainhand",
                       "slot": "mainhand",
-                      "type": "generic.attack_speed",
+                      "type": "minecraft:generic.attack_speed",
                       "amount": -3.1,
                       "operation": "add_value"
                     }
@@ -480,14 +480,14 @@
                   {
                     "id": "offhand",
                     "slot": "offhand",
-                    "type": "generic.scale",
+                    "type": "minecraft:generic.scale",
                     "amount": -0.8,
                     "operation": "add_multiplied_base"
                   },
                   {
                     "id": "offhand",
                     "slot": "offhand",
-                    "type": "generic.movement_speed",
+                    "type": "minecraft:generic.movement_speed",
                     "amount": -0.5,
                     "operation": "add_multiplied_base"
                   }

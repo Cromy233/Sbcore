@@ -3,7 +3,7 @@ execute at @e[type=item,nbt={Item:{id:"minecraft:tnt"},OnGround:1b}] run summon 
 execute as @e[type=item,nbt={Item:{id:"minecraft:baked_potato"}}] run data merge entity @s {Item:{components:{rarity:"uncommon","minecraft:item_name":'"至高马铃薯"',"minecraft:food":{nutrition:5,saturation:6,can_always_eat:1b,effects:[{effect:{id:"minecraft:absorption",duration:1200,amplifier:4}},{effect:{id:"wind_charged",duration:400,amplifier:0}}]}}}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:rotten_flesh"}}] run data merge entity @s {Item:{components:{"minecraft:item_name":'"辣条"',"minecraft:food":{eat_seconds:0.4,nutrition:2,saturation:1,effects:[{effect:{id:"minecraft:hunger",duration:300,amplifier:0},probability:0.5}]}}}}
 execute at @e[type=item,nbt={Item:{id:"minecraft:lightning_rod"},OnGround:1b}] run summon lightning_bolt ~ ~ ~ {Tags:["sbcore"]}
-execute at @e[type=item,nbt={Item:{id:"minecraft:water_bucket"},OnGround:1b}] unless block ~ ~ ~ water run fill ~1 ~ ~1 ~-1 ~ ~-1 water[level=6] replace air
+execute at @e[type=item,nbt={Item:{id:"minecraft:water_bucket"},OnGround:1b}] unless block ~ ~ ~ water run fill ~1 ~ ~1 ~-1 ~ ~-1 water[level=6] replace #air
 execute as @e[type=item,nbt={Item:{id:"minecraft:bucket"},OnGround:1b}] at @s if block ~ ~ ~ water run data merge entity @s {Item:{id:"minecraft:water_bucket"}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:wheat_seeds"}}] run data merge entity @s {Item:{id:"minecraft:beetroot_seeds"}}
 execute as @e[type=item,nbt={Item:{id:"minecraft:potato"}}] run data merge entity @s {Item:{id:"minecraft:cookie",components:{"minecraft:food":{nutrition:2,saturation:1,effects:[{effect:{id:"minecraft:regeneration",duration:200,amplifier:0}}]}}}}

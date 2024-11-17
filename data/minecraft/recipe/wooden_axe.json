@@ -23,14 +23,14 @@
         "modifiers": [
           {
             "id": "mainhand",
-            "type": "generic.attack_damage",
+            "type": "minecraft:generic.attack_damage",
             "slot": "mainhand",
             "amount": 14,
             "operation": "add_value"
           },
           {
             "id": "mainhand",
-            "type": "generic.attack_speed",
+            "type": "minecraft:generic.attack_speed",
             "slot": "mainhand",
             "amount": -3.2,
             "operation": "add_value"

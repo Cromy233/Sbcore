@@ -96,14 +96,14 @@
                   "slot": "mainhand",
                   "amount": 5,
                   "operation": "add_value",
-                  "type": "generic.attack_damage"
+                  "type": "minecraft:generic.attack_damage"
                 },
                 {
                   "id": "mainhand",
                   "slot": "mainhand",
                   "amount": -0.24,
                   "operation": "add_value",
-                  "type": "generic.attack_speed"
+                  "type": "minecraft:generic.attack_speed"
                 }
               ]
             },

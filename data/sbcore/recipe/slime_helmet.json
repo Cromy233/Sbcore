@@ -21,14 +21,14 @@
                         "modifiers":[
                             {
                               "id": "head",
-                              "type": "generic.armor_toughness",
+                              "type": "minecraft:generic.armor_toughness",
                               "amount": 1.0,
                               "slot": "head",
                               "operation": "add_value"
                              },
                              {
                                 "id": "head",
-                                "type": "generic.luck",
+                                "type": "minecraft:generic.luck",
                                 "amount": 0.1,
                                 "slot": "head",
                                 "operation": "add_value"

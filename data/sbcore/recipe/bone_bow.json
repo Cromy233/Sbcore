@@ -24,7 +24,7 @@
                     "modifiers":[
                         {
                             "id":"mainhand",
-                            "type":"generic.movement_efficiency",
+                            "type":"minecraft:generic.movement_efficiency",
                             "amount":1.0,
                             "slot":"mainhand",
                             "operation":"add_value"

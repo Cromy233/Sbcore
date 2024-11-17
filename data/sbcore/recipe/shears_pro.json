@@ -23,14 +23,14 @@
             "modifiers":[
                 {
                     "id":"mainhand",
-                    "type":"player.block_interaction_range",
+                    "type":"minecraft:player.block_interaction_range",
                     "amount":2,
                     "slot":"mainhand",
                     "operation":"add_value"
                 },
                 {
                   "id":"mainhand",
-                  "type":"player.entity_interaction_range",
+                  "type":"minecraft:player.entity_interaction_range",
                   "amount":2,
                   "slot":"mainhand",
                   "operation":"add_value"

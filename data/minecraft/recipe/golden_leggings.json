@@ -20,7 +20,7 @@
         "modifiers": [
           {
             "id": "legs",
-            "type": "player.sneaking_speed",
+            "type": "minecraft:player.sneaking_speed",
             "slot": "legs",
             "amount": 0.5,
             "operation": "add_multiplied_base"

@@ -22,14 +22,14 @@
                         "modifiers":[
                             {
                               "id": "chest",
-                              "type": "generic.armor_toughness",
+                              "type": "minecraft:generic.armor_toughness",
                               "amount": 3.0,
                               "slot": "chest",
                               "operation": "add_value"
                              },
                              {
                                 "id": "chest",
-                                "type": "generic.luck",
+                                "type": "minecraft:generic.luck",
                                 "amount": 0.1,
                                 "slot": "chest",
                                 "operation": "add_value"

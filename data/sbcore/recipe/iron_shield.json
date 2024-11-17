@@ -25,42 +25,42 @@
                         "modifiers":[
                             {
                                 "id":"mainhand",
-                                "type":"generic.armor",
+                                "type":"minecraft:generic.armor",
                                 "amount":3.0,
                                 "slot":"mainhand",
                                 "operation":"add_value"
                             },
                             {
                                 "id":"mainhand",
-                                "type":"generic.armor_toughness",
+                                "type":"minecraft:generic.armor_toughness",
                                 "amount":1.0,
                                 "slot":"mainhand",
                                 "operation":"add_value"
                             },
                             {
                                 "id":"mainhand",
-                                "type":"generic.movement_speed",
+                                "type":"minecraft:generic.movement_speed",
                                 "amount":-0.2,
                                 "slot":"mainhand",
                                 "operation":"add_multiplied_base"
                             },
                             {
                               "id":"offhand",
-                              "type":"generic.armor",
+                              "type":"minecraft:generic.armor",
                               "amount":3.0,
                               "slot":"offhand",
                               "operation":"add_value"
                             },
                             {
                                 "id":"offhand",
-                                "type":"generic.armor_toughness",
+                                "type":"minecraft:generic.armor_toughness",
                                 "amount":1.0,
                                 "slot":"offhand",
                                 "operation":"add_value"
                             },
                             {
                                 "id":"offhand",
-                                "type":"generic.movement_speed",
+                                "type":"minecraft:generic.movement_speed",
                                 "amount":-0.2,
                                 "slot":"offhand",
                                 "operation":"add_multiplied_base"

@@ -19,7 +19,7 @@
         "modifiers": [
           {
             "id": "head",
-            "type": "generic.oxygen_bonus",
+            "type": "minecraft:generic.oxygen_bonus",
             "slot": "head",
             "amount": 0.5,
             "operation": "add_value"

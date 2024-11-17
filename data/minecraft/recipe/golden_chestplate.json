@@ -20,7 +20,7 @@
         "modifiers": [
           {
             "id": "chest",
-        "type": "generic.burning_time",
+        "type": "minecraft:generic.burning_time",
         "slot": "chest",
         "amount": -0.5,
         "operation": "add_multiplied_base"

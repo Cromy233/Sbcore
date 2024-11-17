@@ -23,21 +23,21 @@
             "modifiers":[
                 {
                     "id":"sbcore",
-                    "type":"generic.attack_damage",
+                    "type":"minecraft:generic.attack_damage",
                     "amount":4,
                     "slot":"mainhand",
                     "operation":"add_value"
                 },
                 {
                     "id":"sbcore",
-                    "type":"generic.attack_speed",
+                    "type":"minecraft:generic.attack_speed",
                     "amount":-2,
                     "slot":"mainhand",
                     "operation":"add_value"
                 },
                 {
                     "id":"sbcore",
-                    "type":"generic.movement_speed",
+                    "type":"minecraft:generic.movement_speed",
                     "amount":0.2,
                     "slot":"mainhand",
                     "operation":"add_multiplied_base"

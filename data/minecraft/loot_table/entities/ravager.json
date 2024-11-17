@@ -19,6 +19,17 @@
                 "per_level_above_first": 0.1
               },
               "enchantment": "minecraft:density"
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "armor.*": {
+                    "items": "minecraft:short_grass"
+                  }
+                }
+              }
             }
           ],
           "functions": [
@@ -36,28 +47,28 @@
                     {
                       "id": "mainhand",
                       "slot": "mainhand",
-                      "type": "generic.attack_speed",
+                      "type": "minecraft:generic.attack_speed",
                       "amount": -2.3,
                       "operation": "add_value"
                     },
                     {
                       "id": "mainhand",
                       "slot": "mainhand",
-                      "type": "generic.attack_damage",
+                      "type": "minecraft:generic.attack_damage",
                       "amount": 7,
                       "operation": "add_value"
                     },
                     {
                       "id": "mainhand",
                       "slot": "mainhand",
-                      "type": "generic.movement_speed",
+                      "type": "minecraft:generic.movement_speed",
                       "amount": 0.1,
                       "operation": "add_multiplied_base"
                     },
                     {
                       "id": "mainhand",
                       "slot": "mainhand",
-                      "type": "generic.armor",
+                      "type": "minecraft:generic.armor",
                       "amount": -0.5,
                       "operation": "add_multiplied_base"
                     }
@@ -100,6 +111,17 @@
                 "per_level_above_first": 0.1
               },
               "enchantment": "minecraft:density"
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "armor.*": {
+                    "items": "minecraft:short_grass"
+                  }
+                }
+              }
             }
           ],
           "functions": [
@@ -117,28 +139,28 @@
                     {
                       "id": "chest",
                       "slot": "chest",
-                      "type": "generic.armor",
+                      "type": "minecraft:generic.armor",
                       "amount": 5,
                       "operation": "add_value"
                     },
                     {
                       "id": "chest",
                       "slot": "chest",
-                      "type": "generic.armor_toughness",
+                      "type": "minecraft:generic.armor_toughness",
                       "amount": 2,
                       "operation": "add_value"
                     },
                     {
                       "id": "chest",
                       "slot": "chest",
-                      "type": "generic.attack_damage",
+                      "type": "minecraft:generic.attack_damage",
                       "amount": 1,
                       "operation": "add_value"
                     },
                     {
                       "id": "chest",
                       "slot": "chest",
-                      "type": "generic.movement_speed",
+                      "type": "minecraft:generic.movement_speed",
                       "amount": -0.2,
                       "operation": "add_multiplied_base"
                     }

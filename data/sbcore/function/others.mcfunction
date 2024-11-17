@@ -32,18 +32,18 @@ execute at @e[type=minecraft:fireball,tag=!sbcore] as @e[type=minecraft:fireball
 execute as @e[type=minecraft:fireball,tag=!sbcore] run kill @s
 
 #闪电
-execute at @e[type=minecraft:lightning_bolt,tag=!sbcore] run fill ~ -64 ~ ~ 319 ~ white_stained_glass replace air
+execute at @e[type=minecraft:lightning_bolt,tag=!sbcore] run fill ~ -64 ~ ~ 319 ~ white_stained_glass replace #air
 execute at @e[type=minecraft:lightning_bolt,tag=!sbcore] run fill ~ -64 ~ ~ 319 ~ white_stained_glass replace fire
 execute at @e[type=minecraft:lightning_bolt,tag=!sbcore] run fill ~ -64 ~ ~ 319 ~ white_stained_glass replace water
 execute at @e[type=minecraft:lightning_bolt,tag=!sbcore] run fill ~ -64 ~ ~ 319 ~ white_stained_glass replace lava
-#execute at @e[type=minecraft:lightning_bolt,tag=!sbcore] run fill ~ -64 ~ ~ 319 ~ water[level=7] replace air
+#execute at @e[type=minecraft:lightning_bolt,tag=!sbcore] run fill ~ -64 ~ ~ 319 ~ water[level=7] replace #air
 
 
 #雪球
-execute at @e[type=minecraft:snowball,tag=!sbcore] unless block ~ ~-1 ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:torch replace air
-execute at @e[type=minecraft:snowball,tag=!sbcore] unless block ~ ~-1 ~ air run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
+execute at @e[type=minecraft:snowball,tag=!sbcore] unless block ~ ~-1 ~ #air run fill ~ ~ ~ ~ ~ ~ minecraft:torch replace #air
+execute at @e[type=minecraft:snowball,tag=!sbcore] unless block ~ ~-1 ~ #air run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
 execute at @e[type=minecraft:snowball,tag=!sbcore] if block ~ ~-1 ~ torch run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
-execute as @e[type=minecraft:snowball,tag=!sbcore] at @s unless block ~ ~-1 ~ air run kill @s
+execute as @e[type=minecraft:snowball,tag=!sbcore] at @s unless block ~ ~-1 ~ #air run kill @s
 
 #execute at @e[type=minecraft:snowball] run summon minecraft:fireball ~ ~ ~ {Tags:["sbcore"]}
 #execute at @e[type=minecraft:snowball] as @e[type=minecraft:fireball,sort=nearest,limit=3,distance=..0.1,tag=sbcore] at @s run data modify entity @s Motion set from entity @e[type=minecraft:snowball,sort=nearest,limit=1] Motion
@@ -58,7 +58,7 @@ execute at @e[type=minecraft:egg] as @e[type=minecraft:fireball,tag=sbcore,dista
 execute at @e[type=minecraft:egg] at @e[type=minecraft:magma_cube,distance=..32,nbt={NoGravity:1b}] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
 execute at @e[type=minecraft:egg] as @e[type=minecraft:magma_cube,distance=..32,nbt={NoGravity:1b}] run data merge entity @s {NoGravity:0b}
 execute at @e[type=minecraft:egg] at @e[type=minecraft:piglin,distance=..32,tag=sbcore] run particle minecraft:flash ~ ~ ~ 0 0 0 1 1 force
-execute at @e[type=minecraft:egg] as @e[type=minecraft:piglin,distance=..32,tag=sbcore] run data merge entity @s {attributes:[{id:"generic.gravity",base:0.08}]}
+execute at @e[type=minecraft:egg] as @e[type=minecraft:piglin,distance=..32,tag=sbcore] run data merge entity @s {attributes:[{id:"minecraft:generic.gravity",base:0.08}]}
 execute at @e[type=minecraft:egg] run playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 10 1
 execute as @e[type=minecraft:egg] run kill @s
 
@@ -68,8 +68,8 @@ execute at @e[type=minecraft:evoker_fangs] run effect give @a[distance=..0.75,ga
 
 #盔甲架
 execute as @e[type=minecraft:armor_stand] at @s run tp @s ~ ~ ~ ~5 ~
-execute as @e[type=minecraft:armor_stand] at @s run fill ^6 ^ ^6 ^6 ^ ^6 fire replace air
-execute as @e[type=minecraft:armor_stand] at @s run fill ^-6 ^ ^-6 ^-6 ^ ^-6 fire replace air
+execute as @e[type=minecraft:armor_stand] at @s run fill ^6 ^ ^6 ^6 ^ ^6 fire replace #air
+execute as @e[type=minecraft:armor_stand] at @s run fill ^-6 ^ ^-6 ^-6 ^ ^-6 fire replace #air
 execute as @e[type=minecraft:armor_stand] at @s positioned ~ ~3 ~ run particle minecraft:flame ^6 ^ ^6 0.1 1.5 0.1 0.01 10 normal
 execute as @e[type=minecraft:armor_stand] at @s positioned ~ ~3 ~ run particle minecraft:flame ^-6 ^ ^-6 0.1 1.5 0.1 0.01 10 force
 execute at @e[type=minecraft:armor_stand] run effect give @e[distance=..6.5,type=!minecraft:player] minecraft:resistance 1 1 true

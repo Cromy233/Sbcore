@@ -187,7 +187,7 @@
                     {
                       "id": "mainhand",
                       "slot": "mainhand",
-                      "type": "player.mining_efficiency",
+                      "type": "minecraft:player.mining_efficiency",
                       "amount": 2,
                       "operation": "add_value"
                     }

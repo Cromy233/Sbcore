@@ -56,21 +56,21 @@
                     {
                       "id": "chest",
                       "slot": "chest",
-                      "type": "generic.armor",
+                      "type": "minecraft:generic.armor",
                       "amount": 8,
                       "operation": "add_value"
                     },
                     {
                       "id": "chest",
                       "slot": "chest",
-                      "type": "generic.armor_toughness",
+                      "type": "minecraft:generic.armor_toughness",
                       "amount": 3,
                       "operation": "add_value"
                     },
                     {
                       "id": "chest",
                       "slot": "chest",
-                      "type": "generic.attack_damage",
+                      "type": "minecraft:generic.attack_damage",
                       "amount": 1,
                       "operation": "add_value"
                     }

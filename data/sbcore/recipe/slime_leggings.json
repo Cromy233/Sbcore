@@ -22,14 +22,14 @@
                         "modifiers":[
                             {
                               "id": "legs",
-                              "type": "generic.armor_toughness",
+                              "type": "minecraft:generic.armor_toughness",
                               "amount": 2.0,
                               "slot": "legs",
                               "operation": "add_value"
                              },
                              {
                                 "id": "legs",
-                                "type": "generic.luck",
+                                "type": "minecraft:generic.luck",
                                 "amount": 0.1,
                                 "slot": "legs",
                                 "operation": "add_value"
