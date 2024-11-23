@@ -35,7 +35,7 @@ execute as @e[type=minecraft:vindicator,tag=sbcore] on attacker if entity @s[typ
 
 #苦力怕
 execute as @e[type=creeper,tag=!sbcore] at @s unless entity @a[distance=..5,gamemode=!spectator] run effect give @s minecraft:invisibility 1 255 true
-execute as @e[type=creeper,tag=!sbcore] at @s if entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {powered:1b,Tags:["sbcore"],attributes:[{id:"minecraft:generic.max_health",base:6}]}
+execute as @e[type=creeper,tag=!sbcore] at @s if entity @a[distance=..5,gamemode=!spectator] run data merge entity @s {ExplosionRadius:1,Fuse:15s,powered:1b,Tags:["sbcore"],attributes:[{id:"minecraft:generic.max_health",base:7}]}
 
 #烈焰人
 execute as @e run attribute @s minecraft:generic.burning_time modifier remove blaze_curse
