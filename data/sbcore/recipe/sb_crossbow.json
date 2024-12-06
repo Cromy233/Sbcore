@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "tag": "planks"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XX ",
+    "X X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:crossbow",
+    "components": {
+                  "minecraft:max_damage": 3,
+                  "enchantments": {
+                    "minecraft:quick_charge": 3,
+                    "minecraft:unbreaking": 2,
+                    "multishot": 1
+                    
+                  },
+                  "enchantment_glint_override": false
+    }
+  }
+}
