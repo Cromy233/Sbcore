@@ -197,12 +197,13 @@ execute as @e[type=minecraft:warden,tag=sbcore,nbt={Brain:{memories:{"minecraft:
 #execute at @e[type=minecraft:warden,tag=sbcore] run effect clear @a[distance=..16,gamemode=!spectator] darkness
 
 #洞穴蜘蛛
-execute at @e[type=minecraft:cave_spider,tag=!sbcore] run effect give @e[distance=..5,type=!minecraft:player] minecraft:weaving 30 0 false
-#execute at @e[type=minecraft:cave_spider,tag=!sbcore] run effect give @e[distance=..5,type=!minecraft:player] minecraft:night_vision 15 0 false
-execute at @e[type=minecraft:cave_spider,tag=!sbcore] run effect give @a[distance=..5,gamemode=!spectator] minecraft:weaving 30 0 false
-#execute at @e[type=minecraft:cave_spider,tag=!sbcore] run effect give @a[distance=..5,gamemode=!spectator] minecraft:night_vision 15 0 false
+#execute at @e[type=minecraft:cave_spider,tag=!sbcore] run effect give @e[distance=..5,type=!minecraft:player] minecraft:weaving 30 0 false
+##execute at @e[type=minecraft:cave_spider,tag=!sbcore] run effect give @e[distance=..5,type=!minecraft:player] minecraft:night_vision 15 0 false
+#execute at @e[type=minecraft:cave_spider,tag=!sbcore] run effect give @a[distance=..5,gamemode=!spectator] minecraft:weaving 30 0 false
+##execute at @e[type=minecraft:cave_spider,tag=!sbcore] run effect give @a[distance=..5,gamemode=!spectator] minecraft:night_vision 15 0 false
 
 execute as @e[type=minecraft:cave_spider,tag=!sbcore] at @s if entity @e[distance=0.1..5,type=!minecraft:player,type=!minecraft:item,nbt=!{Passengers:[{}]}] run ride @s mount @e[distance=0.1..5,type=!minecraft:player,type=!minecraft:item,nbt=!{Passengers:[{}]},limit=1,sort=nearest]
+execute as @e[type=minecraft:cave_spider,tag=!sbcore] on vehicle run effect give @s minecraft:resistance 15 0
 
 #尸壳
 execute as @e[type=minecraft:husk,tag=!sbcore] at @s if entity @a[distance=..1.5,gamemode=!spectator] run ride @p[gamemode=!spectator] mount @s

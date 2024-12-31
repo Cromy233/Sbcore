@@ -11,7 +11,7 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 1.0,
+                "max": 0.5,
                 "min": -1.0
               },
               "function": "minecraft:set_count"
@@ -19,41 +19,47 @@
             {
               "count": {
                 "type": "minecraft:uniform",
-                "max": 0.5,
+                "max": 0.25,
                 "min": 0.0
               },
-              "enchantment": "minecraft:looting",
+              "enchantment": "minecraft:bane_of_arthropods",
               "function": "minecraft:enchanted_count_increase"
             }
           ],
-          "name": "minecraft:snowball"
+          "name": "minecraft:spider_eye"
         }
       ],
-      "rolls": 3.0
+      "rolls": 4.0
     },
     {
       "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchantment": "minecraft:bane_of_arthropods",
+          "unenchanted_chance": 0.5,
+          "enchanted_chance": {
+            "type": "linear",
+            "base": 0.32,
+            "per_level_above_first": -0.08
+          }
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": -2.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
           "name": "minecraft:cave_spider_spawn_egg"
         }
       ],
-      "rolls": 3.0
+      "rolls": 1.0
     },
     {
       "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
@@ -73,7 +79,7 @@
                 "max": 0.5,
                 "min": 0.0
               },
-              "enchantment": "minecraft:looting",
+              "enchantment": "minecraft:bane_of_arthropods",
               "function": "minecraft:enchanted_count_increase"
             }
           ],
@@ -81,6 +87,113 @@
         }
       ],
       "rolls": 3.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.1,
+            "per_level_above_first": 0.05
+          },
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.05
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:pumpkin_pie",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:food": {
+                  "nutrition": 7,
+                  "saturation": 0.5,
+                  "effects": [
+                    {
+                      "effect": {
+                        "id": "minecraft:poison",
+                        "duration": 200
+                      },
+                      "probability": 0.25
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:poison",
+                        "duration": 300
+                      },
+                      "probability": 0.25
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:night_vision",
+                        "duration": 1800
+                      }
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:night_vision",
+                        "duration": 2400
+                      },
+                      "probability": 0.5
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:night_vision",
+                        "duration": 3000
+                      },
+                      "probability": 0.2
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:nausea",
+                        "duration": 500
+                      }
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:nausea",
+                        "duration": 600
+                      },
+                      "probability": 0.5
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:nausea",
+                        "duration": 700
+                      },
+                      "probability": 0.25
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:darkness",
+                        "duration": 200
+                      },
+                      "probability": 0.05
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:darkness",
+                        "duration": 400
+                      },
+                      "probability": 0.05
+                    }
+                  ]
+                },
+                "minecraft:item_name":"{\"text\":\"???\"}"
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
     }
   ],
   "random_sequence": "minecraft:entities/cave_spider"
