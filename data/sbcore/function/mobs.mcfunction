@@ -224,6 +224,7 @@ execute as @e[type=minecraft:stray,tag=!sbcore] at @s if entity @a[distance=..3,
 execute as @e[type=minecraft:stray,tag=!sbcore] at @s if entity @a[distance=..3,gamemode=!spectator] run item replace entity @s armor.feet from entity @p armor.feet
 execute as @e[type=minecraft:stray,tag=!sbcore] at @s if entity @a[distance=..3,gamemode=!spectator] run item replace entity @s weapon.mainhand from entity @p weapon.mainhand
 execute as @e[type=minecraft:stray,tag=!sbcore] at @s if entity @a[distance=..3,gamemode=!spectator] run item replace entity @s weapon.offhand from entity @p weapon.offhand
+execute as @e[type=minecraft:stray,tag=!sbcore] at @s if entity @a[distance=..3,gamemode=!spectator] run effect give @s minecraft:instant_health 1 0 true
 execute at @e[type=minecraft:stray,tag=!sbcore] if entity @a[distance=..3,gamemode=!spectator] run particle minecraft:snowflake ~ ~1 ~ 0.4 0.7 0.4 0 30 normal
 execute as @e[type=minecraft:stray,tag=!sbcore] at @s if entity @a[distance=..3,gamemode=!spectator] run data merge entity @s {Tags:["sbcore"],HandDropChances:[0f,0f],ArmorDropChances:[0f,0f,0f,0f]}
 
